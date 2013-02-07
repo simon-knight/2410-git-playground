@@ -1,0 +1,25 @@
+/*------------------------------------*\
+$FOOTER
+\*------------------------------------*/
+
+.footer {
+	background-color:$greyscale-60;
+	color:$white;
+	padding:$gutter;
+	margin-top:$gutter;
+	
+		p{
+			margin-bottom:0;
+			@include font-size(14px)
+		}
+		
+		a {
+			color:$white;
+		}
+}
+
+.social {
+	float:right;
+	display:block;
+	margin-left:10px;
+}

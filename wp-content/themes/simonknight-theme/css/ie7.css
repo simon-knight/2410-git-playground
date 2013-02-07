@@ -1,0 +1,143 @@
+/* line 4, ../sass/ie7.scss */
+h1.entry-title {
+  font-size: 50px; }
+
+/* line 8, ../sass/ie7.scss */
+body {
+  width: 940px;
+  background: white;
+  padding: 20px 10px 10px 10px;
+  margin-top: 0px; }
+
+/* line 16, ../sass/ie7.scss */
+.site {
+  margin-top: 0px;
+  max-width: 960px;
+  padding-left: 0px;
+  padding-right: 0px; }
+
+/* line 23, ../sass/ie7.scss */
+#content {
+  width: 940px; }
+
+/* line 27, ../sass/ie7.scss */
+.grid-wrapper {
+  width: 960px;
+  margin-left: -20px;
+  background: white;
+  margin-top: 0px;
+  padding-top: 0px; }
+
+/* line 36, ../sass/ie7.scss */
+.site-title a {
+  color: #EC145B;
+  margin-top: 0px;
+  padding-top: 0px;
+  font-size: 60px; }
+
+/* line 43, ../sass/ie7.scss */
+.desk-five-twelfths {
+  width: 380px;
+  padding-left: 20px; }
+
+/* line 48, ../sass/ie7.scss */
+.desk-seven-twelfths {
+  width: 540px;
+  padding-left: 0px; }
+
+/* line 53, ../sass/ie7.scss */
+.desk-three-quarters {
+  width: 720px; }
+
+/* line 58, ../sass/ie7.scss */
+.desk-one-third {
+  width: 233px; }
+
+/* line 62, ../sass/ie7.scss */
+.desk-one-quarter {
+  width: 220px;
+  padding-left: 0px; }
+
+/* line 67, ../sass/ie7.scss */
+.desk-one-half {
+  width: 350px; }
+  /* line 70, ../sass/ie7.scss */
+  .desk-one-half h3 {
+    margin-left: 10px;
+    margin-bottom: 0px;
+    padding-bottom: 0px;
+    font-size: 25px;
+    line-height: 1.5em; }
+  /* line 78, ../sass/ie7.scss */
+  .desk-one-half a {
+    margin-bottom: 0px;
+    display: inline-block;
+    padding-bottom: 20px; }
+  /* line 84, ../sass/ie7.scss */
+  .desk-one-half p {
+    margin-bottom: 0px; }
+
+/* line 89, ../sass/ie7.scss */
+.hero {
+  background-image: url("images/hero-bg.png");
+  -moz-background-size: 100% auto;
+  /* Old Firefox */
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+  padding: 50px 0px 0px;
+  text-align: center;
+  min-height: 282px;
+  width: 700px; }
+  /* line 100, ../sass/ie7.scss */
+  .hero ul {
+    list-style-image: url("images/bullet.png");
+    list-style-position: inside;
+    list-style-type: none;
+    margin-left: 0px;
+    margin-bottom: 0px;
+    font-size: 30px;
+    font-weight: 300;
+    padding-left: 0px; }
+  /* line 111, ../sass/ie7.scss */
+  .hero li {
+    margin-bottom: 0; }
+
+/* line 117, ../sass/ie7.scss */
+.entry-meta-holder {
+  line-height: 1.5em; }
+
+/* line 122, ../sass/ie7.scss */
+.portrait {
+  margin: 0px;
+  padding: 0px;
+  border: 0px;
+  display: block; }
+
+/* line 129, ../sass/ie7.scss */
+.portrait img {
+  width: 220px;
+  height: 332px;
+  margin: 0px;
+  padding: 0px; }
+
+/* line 137, ../sass/ie7.scss */
+.hire {
+  margin: 0px;
+  padding: 0px;
+  border: 0px;
+  display: block; }
+  /* line 143, ../sass/ie7.scss */
+  .hire h3 {
+    display: block;
+    width: 180px; }
+  /* line 148, ../sass/ie7.scss */
+  .hire span {
+    margin-bottom: 20px; }
+
+/* line 153, ../sass/ie7.scss */
+img#trim {
+  display: none;
+  width: 220px;
+  height: 10px;
+  margin: 0px;
+  padding: 0px; }

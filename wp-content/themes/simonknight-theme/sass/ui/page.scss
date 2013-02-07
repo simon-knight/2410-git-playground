@@ -1,0 +1,34 @@
+/*------------------------------------*\
+$PAGE
+\*------------------------------------*/
+
+html{
+    font-family:$brand-face;
+    font-weight:300;
+    color:$black;
+    background-color:$white;
+    background-image:url('http://www.simonknight.co.uk/wp-content/themes/simonknight-theme/images/bg.png');
+    background-repeat: repeat-x;
+    
+    	@include media-query(lap){
+        	background-image:url('http://www.simonknight.co.uk/wp-content/themes/simonknight-theme/images/bg-lap.png');
+        	}
+        	
+    	
+}
+
+
+body {
+	max-width:960px;
+	padding:$gutter $gutter_half $gutter_half $gutter_half;
+    font-size: 16px;
+    line-height: 20px;
+    background-color:$white;
+    margin: 0px auto;
+    
+    @include media-query(portable){
+        padding-right:$half-spacing-unit;
+        padding-left: $half-spacing-unit;
+        max-width:720px;
+    }
+}

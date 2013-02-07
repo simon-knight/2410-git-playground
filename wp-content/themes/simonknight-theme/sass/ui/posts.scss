@@ -1,0 +1,159 @@
+/*------------------------------------*\
+$POSTS
+\*------------------------------------*/
+
+
+
+.single-post .entry-content {
+	margin-bottom:60px;
+
+}
+
+span.date {
+	margin-bottom:$gutter / 2;
+	display:block;
+	color:$greyscale-60;
+	@include font-size(17px);
+	
+		@include media-query(palm){
+	    		 @include font-size(19px);  
+	    		 margin-bottom:15px; 
+	    		 text-align:left;
+	    		 padding:0px 15px; 				
+	    		} 
+}
+
+span.read-more {
+	display:block;
+	margin-bottom:$gutter * 3; 
+	margin-top:0px;
+	
+		@include media-query(palm){
+	    		 text-align:left;
+	    		 margin-left:15px;				
+	    		} 
+}
+
+
+footer.entry-meta {
+
+		line-height:24px; 
+		text-align:left;
+}
+
+
+
+article.post { /* Post Article content */
+	margin-top:60px;
+	padding: 0px 10px 0px 10px;
+	
+		@include media-query(palm){
+        		margin-top:0px;
+        		padding:0px;
+        		}
+        		
+        @include media-query(lap){
+        		margin-top:20px;
+        		}
+
+	
+		h1 { 
+		    @include font-size(36px); 
+		    color:$brand-color;margin-bottom:0px;
+		    
+		    	@include media-query(palm){
+        		@include font-size(26px);
+        		padding:0px 15px;
+        		}
+
+		}
+		
+		h4 { 
+		    @include font-size(24px); 
+		    color:$black;margin-bottom:10px;
+		    
+		    	@include media-query(palm){
+        		@include font-size(22px);
+        		line-height:26px;
+        		color:$greyscale-60;
+        		}
+        		
+        		@include media-query(lap){
+        		@include font-size(18px);
+        		}
+
+		}
+		
+		span.date { 
+		    ;margin-bottom:20px;
+		}
+}
+
+
+
+.single-post .comments-area {
+	margin-top:40px;
+	padding:0px 10px 0px 10px;
+	border-top:1px solid $greyscale-35;
+	
+		@include media-query(palm){
+        		margin-top:$gutter;
+        		padding:0px 10px;
+        		}
+}
+
+article.comment {
+	margin-top:$gutter;
+
+}
+
+ol.commentlist{
+
+			@include media-query(palm){
+        		margin-left:20px;
+        		}
+}
+
+.media .comment-content {
+	
+	p {
+			@include media-query(palm){
+        		padding:0px;
+        		}
+	}
+}
+
+.comment-meta {
+	margin-bottom: 10px;
+	
+		@include media-query(palm){
+        		line-height:24px;
+        		text-align:left;
+        		}
+        		
+    time {
+    }
+}
+
+
+h2.comments-title { /* Blog category title */
+	@include font-size(22px); 
+	font-weight:400;
+	margin-top:$gutter * 2;
+	margin-bottom:10px;
+	margin-left:46px;
+	
+		@include media-query(palm){
+        		margin-left:0px;
+        		text-align:left;
+        		line-height:30px
+        		}
+
+}
+
+img.avatar {
+	margin: 0 10px 0px 0px;
+}
+
+cite.fn {
+}

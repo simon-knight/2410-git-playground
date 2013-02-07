@@ -1,0 +1,16 @@
+
+
+
+
+/*------------------------------------*\
+HERO SECTION - FADE IN OF BULLETS
+\*------------------------------------*/
+
+/* make keyframes that tell the start state and the end state of our object */
+@-webkit-keyframes fadeIn { from { opacity:1; } to { opacity:1; } }
+@-moz-keyframes fadeIn { from { opacity:1; } to { opacity:1; } }
+@keyframes fadeIn { from { opacity:1; } to { opacity:1; } }
+ 
+.fade-in {
+    opacity:1;  /* make things invisible upon start */
+}

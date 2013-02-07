@@ -1,0 +1,543 @@
+/*------------------------------------*\
+$BOXES
+\*------------------------------------*/
+
+
+
+
+
+/*------------------------------------*\
+GRIDS - 
+\*------------------------------------*/	
+
+/**
+ * Over-riding Inuit framework here.
+ * When following a 960gs 12 column design, 20px padding-left (rather than 24px) makes for accurate column to grid  
+ * measurements as shown below:
+ * In a 960gs 10px left & right padding on 960px body makes for 940px available width:
+ 
+ * Span-1:   =   60px  =  one-twelth
+ * Span-2:   =  140px  =  one-sixth
+ * Span-3:   =  220px  =  one-quarter
+ * Span-4:   =  300px  =  one-third
+ * Span-5:   =  380px  =  five-twelfths
+ * Span-6:   =  460px  =  one-half 
+ * Span-7:   =  540px  =  seven-twelfths
+ * Span-8:   =  620px  =  two-thirds
+ * Span-9:   =  700px  =  three-quarters
+ * Span-10:  =  780px  =  ten-twelfths
+ * Span-11:  =  860px  =  eleven-twelfths
+ * Span-12:  =  940px  =  one-whole
+ */
+
+.g, .grid {
+    padding-left: $content-padding; /* Adjusted to a 20px gutter */
+}
+
+.gw, .grid-wrapper {
+    margin-left: -$content-padding; /* Adjusted to a 20px gutter */
+}
+
+
+/*------------------------------------*\
+HERO SECTION - BIG BRACKETS & CONTENT 
+\*------------------------------------*/
+
+.hero{
+	-moz-background-size:100% auto; /* Old Firefox */
+	background-size:100% auto;
+	background-repeat:no-repeat;
+	background-image: url('images/hero-bg.png') ;
+    text-align: center;
+    
+    @include media-query(palm){
+    	padding:10px 20px;
+    	background-image: url('images/hero-palm-bg.png') ;
+    	min-height:0px;
+    	}
+    @include media-query(lap){
+    	padding: 45px 70px 0px; 
+    	min-height:246px;
+    	}
+    	
+    @include media-query(desk){
+    	padding: 50px 70px 0px;
+    	min-height:330px;
+    	}
+    
+    	ul {
+    		list-style-image: url('images/bullet.png');
+	    	list-style-position: inside; 
+	    	list-style-type: none; 
+    		margin-left:0px; 
+    		margin-bottom: 0px;
+    		font-weight:300;
+    		
+    		@include media-query(palm){
+	    		@include font-size(20px);
+	    		margin-bottom:$gutter;	    				
+	    	}
+	    	@include media-query(lap){
+		    	@include font-size(21px);
+		    	list-style-image: url('images/bullet-lap.png');
+		    	line-height:1.5em; 
+		    }
+		    
+		    @include media-query(desk){
+		    	@include font-size(30px);
+		    	line-height:1.5em; 
+		    }
+    	}
+    		
+    	li{
+    	margin-bottom: 0;
+    	
+	    	@include media-query(palm){
+	    		margin-top: $gutter_half; margin-bottom: $gutter_half; 
+	    		border-bottom:1px solid $greyscale-15;	
+	    		padding-bottom:10px;    				
+	    		}
+    	}
+}
+
+/*------------------------------------*\
+SIMON COLUMN - RIGHT HAND SIDE
+\*------------------------------------*/
+
+.portrait img{
+
+	@include media-query(palm){
+	width:50%; 
+	height:auto;
+	margin-bottom: 30px;
+    padding: 10px;
+    border:1px solid $greyscale-15;
+	}
+}
+
+.page-template-portfolio-php .portrait img, .page-template-about-simon-php .portrait img, .page-template-contact-php .portrait img, .category-blog .portrait img {
+
+	@include media-query(palm){
+	display:none;
+	}
+}
+
+
+.promo{
+	text-align:center;
+	line-height:0;
+}
+
+.hire {
+	background:$black;
+	padding:$gutter;
+	
+		@include media-query(palm){
+	    		padding:$gutter $gutter + 10; 	    				
+	    		}
+	
+		p {color:$white;
+		
+			@include media-query(palm){
+	    		padding-left:0px; 	    				
+	    		}
+			
+			@include media-query(lap){
+		    	@include font-size(13px);
+		    	margin-bottom:0;
+		    	}	
+		    	
+		}
+		
+		span {color:$brand-color;}
+		
+}
+
+.portrait {
+	line-height:0px;
+}
+
+
+.about-promo{
+	text-align:left;
+	line-height:0;
+}
+
+
+
+
+img#trim {
+@include media-query(palm){
+	    		width:100%;height:auto; 	    				
+	    		}
+	
+}
+
+
+.media {
+		@include media-query(palm){
+	    		text-align:center; 	    				
+	    		}
+	    		
+	    ul{list-style: circle inside none; 
+    		margin-left:0px; margin-bottom: $gutter;
+    		font-weight:300;
+    		font-style:italic;
+    		padding-left:10px;
+    		text-align:left;
+    		
+    			@include media-query(palm){
+	    			@include font-size(19px);
+	    			line-height:32px; 
+	    			
+	    			}
+    			
+    			@include media-query(lap){
+	    			@include font-size(13px); 
+	    			line-height:24px;
+	    			}
+	    		
+	    		@include media-query(desk){
+	    			@include font-size(17px); 
+	    			line-height:32px; 
+	    			}	
+	    		
+	    }
+	    
+	    p {
+	    padding:0px;
+	    
+	    	@include media-query(palm){
+	    		padding:0px 15px;	    				
+	    		}
+	    }
+
+}
+
+
+.media__img {
+	margin-right:$gutter_half;
+	margin-left:30px;
+	
+		
+		@include media-query(palm){
+	    		float:none; margin-right:0; margin-left:0;	    				
+	    		}
+	    		
+		@include media-query(lap){
+	    		width:115px;height:98;margin-left:23px; 	    				
+	    		}
+}
+
+
+
+
+.footer {
+	background-color:$greyscale-60;
+}
+
+
+
+  
+/*------------------------------------*\
+PORTFOLIO PAGE
+\*------------------------------------*/          
+
+
+figure { 
+	display: block; 
+	position: relative; 
+	float: left; 
+	overflow: hidden; 
+	margin: 0 20px 30px 0; 
+	border:1px solid #e3e3e4;
+	
+		 @include media-query(palm){
+	    		width:100%;	
+	    		margin-bottom:50px;    				
+	    		}
+	    		
+	    @include media-query(lap){
+	    		width:100%;	    				
+	    		}
+	    		
+	    		img {
+		    	@include media-query(palm){
+	    		width:100%;    				
+	    		}
+	    }
+} 
+
+figcaption { 
+	position: absolute; 
+	background: black; 
+	background: rgba(0,0,0,0.85); 
+	color: white; 
+	width:100%;
+	opacity: 0; 
+	-webkit-transition: all 0.4s ease; 
+	-moz-transition: all 0.4s ease; 
+	-o-transition: all 0.4s ease; 
+	
+		@include media-query(palm){
+	    		padding:10px 10px 0px 10px;    				
+	    		}
+	    		
+	    @include media-query(lap){
+	    		padding:10px 10px 0px 10px;    				
+	    		}
+	    		
+	    @include media-query(desk){
+	    		padding:5px 5px 10px 5px;    				
+	    		}
+	
+		
+		h3{  
+	    margin-bottom:-9px;
+	    margin-top:0px;
+	    	
+	    	@include media-query(palm){
+	    		padding:0px 0px 3px;	    				
+	    		}
+	    		
+	    	@include media-query(lap){
+	    		@include font-size(19px);
+	    		padding:0px 0px 8px;	    				
+	    		}
+	    		
+	    	@include media-query(desk){
+	    		@include font-size(22px);
+	    		padding:10px 10px 10px 10px;	    				
+	    		}
+	  
+	    } 
+	    
+	    p{  
+	    margin:0; 
+	    color:$white;
+	    padding:0px 0px 8px;
+	    
+	    	@include media-query(palm){
+	    		@include font-size(14px);
+	    		line-height:30px;   				
+	    		}
+	    		
+	    	@include media-query(lap){
+	    		@include font-size(10px);   				
+	    		}
+	    		
+	    	@include media-query(desk){
+	    		@include font-size(15px);
+	    		line-height:32px;
+	    		padding:0 0 0 10px;	   				
+	    		}
+
+	    } 
+	    
+	    span{  
+	    margin:0; 
+	    font-size:14px;
+	    line-height:18px; 
+	    color:$brand-color;
+	    padding:0 2px;
+	    }
+	    
+	    a{ 
+	    background:$brand-color; 
+	    color:$white;
+	    padding:3px 5px;
+	    @include border-radius(4px); 
+	     } 
+	    
+	    
+
+} 
+
+
+figure:hover figcaption { 
+	opacity: 1; 
+} 
+
+figure:before { 
+	display:none; 
+	content: "+"; 
+	position: absolute; 
+	font-weight: 800; 
+	background:$brand-color; 
+	background: rgba(236,20,91,0.6); 
+	text-shadow: 0 0 0px white; 
+	color:$white; 
+	width: 24px; 
+	height: 24px; 
+	@include border-radius(12px);
+	text-align: center; 
+	font-size: 14px; 
+	line-height: 24px; 
+	-moz-transition: all 0.6s ease; 
+	opacity: 0.6; 
+} 
+
+figure:hover:before { 
+opacity: 0; 
+} 
+.cap-bot:before { 
+} 
+.cap-bot figcaption { 
+left: 0; 
+bottom: -30%;
+} 
+.cap-bot:hover figcaption { 
+bottom: 0; 
+}
+
+
+.no-pad { /* for no padding on a grid */
+
+	padding-left:0px;
+	    		
+	@include media-query(lap){	
+	    		padding-left:1.25em;    				
+	    		}
+	    		
+
+	
+}
+
+.portfolio {
+	padding-top:0px;
+}
+
+
+/*------------------------------------*\
+CONTACT PAGE
+\*------------------------------------*/
+
+
+.get-in-touch{ /* div holding the icon text*/
+
+	text-align:center;
+
+	@include media-query(palm){
+	    		 text-align:left; 
+	    		 padding-left:10px;  				
+	    		}	
+}
+
+.icon-text > .icon-text__icon { /* icon settings */
+    margin-left: $gutter;	
+    
+    	@include media-query(palm){
+	    		 margin-left:0px;  
+	    		 margin-bottom:5px; 				
+	    		}
+    }
+
+a.icon-text, span.icon-text { /* text settings */
+	@include font-size(20px);
+	
+		@include media-query(lap){
+	    		 @include font-size(16px);				
+	    		}	
+}
+
+
+.e, .p, .i {
+    display: inline-block;
+    font-style: normal;
+    height: 35px;
+    position: relative;
+    text-align: center;
+    width: 34px;
+}
+
+.e{
+    background-image:url('images/icon-email.jpg');
+    overflow: hidden;
+    top: -1px;
+    vertical-align: middle;
+}
+
+.p{
+    background-image:url('images/icon-phone.jpg');
+    overflow: hidden;
+    top: -1px;
+    vertical-align: middle;
+}
+
+
+.pink-button {
+	background:$brand-color;
+    color:$white;
+    border:0px;
+    @include border-radius(4px);
+    line-height: 1em;
+    padding: 5px 10px;
+    
+    &:hover { background: $greyscale-85; 
+		text-decoration:none; 
+		}
+}
+
+.cv {
+line-height:2em;
+
+	@include media-query(palm){
+	    		 margin-left:55px;  				
+	    		}		
+}
+
+
+
+/* make keyframes that tell the start state and the end state of our object */
+@-webkit-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+@-moz-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+@keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+ 
+.fade-in {
+    opacity:0;  /* make things invisible upon start */
+    -webkit-animation:fadeIn ease-in 1;  /* call our keyframe named fadeIn, use animattion ease-in and repeat it only 1 time */
+    -moz-animation:fadeIn ease-in 1;
+    animation:fadeIn ease-in 1;
+    
+    	@include media-query(palm){
+	    		 opacity:1; 
+	    		 -webkit-animation:fadeIn ease-in 0;    
+	    		  -moz-animation:fadeIn ease-in 0;
+	    		  animation:fadeIn ease-in 0;
+	    		  				
+	    		}
+ 
+    -webkit-animation-fill-mode:forwards;  /* this makes sure that after animation is done we remain at the last keyframe value (opacity: 1)*/
+    -moz-animation-fill-mode:forwards;
+    animation-fill-mode:forwards;
+ 
+    -webkit-animation-duration:1s;
+    -moz-animation-duration:1s;
+    animation-duration:1s;
+}
+ 
+.fade-in.fadeone { /* fade in H1 IF we wanted to */
+-webkit-animation-delay: 0.7s;
+-moz-animation-delay: 0.7s;
+animation-delay: 0.7s;
+}
+ 
+.fade-in.fadetwo { /* fade in first hero bullet */
+-webkit-animation-delay: 1.2s;
+-moz-animation-delay:1.2s;
+animation-delay: 1.2s;
+}
+ 
+.fade-in.fadethree { /* fade in second hero bullet */
+-webkit-animation-delay: 1.6s;
+-moz-animation-delay: 1.6s;
+animation-delay: 1.6s;
+}
+
+.fade-in.fadefour { /* fade in third hero bullet */
+-webkit-animation-delay: 2.1s;
+-moz-animation-delay: 2.1s;
+animation-delay: 2.1s;
+}
+
+

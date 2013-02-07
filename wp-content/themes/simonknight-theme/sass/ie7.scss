@@ -1,0 +1,159 @@
+
+
+
+h1.entry-title {
+	font-size:50px;  
+}
+
+body {
+width:940px;
+background:white;
+padding:20px 10px 10px 10px;
+	margin-top:0px;
+	
+}
+
+.site {
+	margin-top:0px;
+	max-width:960px;
+	padding-left:0px;
+	padding-right:0px;
+}
+
+#content {
+	width:940px;
+}
+
+.grid-wrapper {
+	width:960px;
+	margin-left:-20px;
+	background:white;
+	margin-top:0px;
+	padding-top:0px;
+}
+
+
+.site-title a {
+    color: #EC145B;
+    margin-top:0px;
+    padding-top:0px;
+    font-size:60px;
+}
+
+.desk-five-twelfths {
+	width:380px;
+	padding-left:20px;
+}
+
+.desk-seven-twelfths {
+	width:540px;
+	padding-left:0px;
+}
+
+.desk-three-quarters {
+	width:720px;
+}
+
+
+.desk-one-third {
+	width:233px;
+}
+
+.desk-one-quarter {
+	width:220px;
+	padding-left:0px;
+}
+
+.desk-one-half {
+	width:350px;
+	
+		h3 {
+			margin-left:10px;
+			margin-bottom:0px;
+			padding-bottom:0px;
+			font-size:25px;
+			line-height:1.5em;
+		}
+		
+		a {
+			margin-bottom:0px;
+			display:inline-block;
+			padding-bottom:20px;
+		}
+		
+		p{
+			margin-bottom:0px;
+		}
+}
+
+.hero{
+	background-image: url('images/hero-bg.png') ;
+	-moz-background-size:100% auto; /* Old Firefox */
+	background-size:100% auto;
+	background-repeat:no-repeat;
+	padding: 50px 0px 0px;
+    text-align: center;
+    min-height:282px;
+    width:700px;
+    
+    
+    	ul {
+    		list-style-image: url('images/bullet.png');
+	    	list-style-position: inside; 
+	    	list-style-type: none; 
+    		margin-left:0px; margin-bottom: 0px;
+    		font-size:30px;
+    		font-weight:300;
+    		padding-left:0px;
+    		
+    		    	}
+    		
+    	li{margin-bottom: 0;
+	    	
+    	}
+}
+
+
+.entry-meta-holder {
+	line-height:1.5em;
+}
+
+
+.portrait {
+	margin:0px;
+	padding:0px;
+	border:0px;
+	display:block;
+}
+
+.portrait img{
+	width:220px; 
+	height:332px;
+	margin: 0px;
+    padding: 0px;
+}
+
+
+.hire {
+	margin:0px;
+	padding:0px;
+	border:0px;
+	display:block;
+	
+		h3{
+			display:block;
+			width:180px;
+		}
+		
+		span {
+			margin-bottom:20px;
+		}
+}
+
+img#trim {
+	display:none;
+	width:220px;
+	height:10px;
+	margin:0px;
+	padding:0px;
+}

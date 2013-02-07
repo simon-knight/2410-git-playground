@@ -1,0 +1,150 @@
+/*------------------------------------*\
+$HEADER
+\*------------------------------------*/
+
+#header { 
+border-style: none; 
+}
+
+
+#navbar {
+  width: 80%;
+  height: 23px;
+
+  ul { 
+  list-style-type: none; 
+  }
+  
+  li {
+    float: left;
+    
+    a { font-weight: bold; }
+  }
+}
+
+
+
+
+.menu { 
+ 	position: relative;
+ 	list-style:none; 
+ 	z-index: 50; 
+ 	background: $white; 
+ 	margin-bottom: $gutter;
+ 	margin-left:0;
+ 	ul {
+ 	position: absolute; 
+ 	visibility: hidden;  
+ 	z-index: 110;
+ 		ul { position: absolute; top: 0; }
+ 		li { clear: both; }
+ 		a { width: auto; }
+ 	}
+ 	li { 
+ 	position: relative; 
+ 	float: left; 
+ 	padding-top: 5px;
+ 	@include media-query(palm){
+        float:none;
+        }	
+ 	}
+ 	a { 
+ 	color: $brand-color;
+ 	display:block;
+ 	font-size: 18px; 
+ 	padding-top: 9px; 
+ 	padding-right: 11px; 
+ 	padding-bottom: 9px; 
+ 	padding-left: 11px;
+ 	font-weight:300;
+ 	@include transition-property(all);
+ 	@include transition-duration(0.2s);
+ 	@include transition-timing-function(ease-in);
+ 	
+ 		@include media-query(lap){
+        padding:9px 10px;
+        font-size:14px;
+        }
+        @include media-query(palm){
+        color:$white; 
+        background-color:$brand-color;
+        }
+ 		&:hover { color: #111; 
+ 		background-color: $greyscale-15; 
+ 		-moz-border-radius: 4px; 
+ 		-webkit-border-radius: 4px; 
+ 		border-radius: 4px; }
+ 		
+ 	}
+ 	&:after { 
+	content: "."; 
+	display: block; 
+	height: 0; 
+	clear: both; 
+	visibility: hidden; 
+	}
+	
+	@include media-query(palm){
+        display:none;
+        float:none;
+        }	
+        
+}
+
+
+.current-menu-item a, .current-post-parent a {
+	color:$black;
+	@include media-query(palm){
+        background-color:$black; color:$white;
+        }	
+		
+}
+    
+
+
+
+#menu-icon {
+    display: none; /* hide menu icon initially */
+    @include media-query(palm){
+        background: #303030 url(images/mobile-menu-icon.png) no-repeat 0 0; 
+        cursor: pointer;
+        display: inline-block; 
+        height: 30px;
+        margin: 10px 0px 0px 10px;
+        margin-top:-113px;
+        width: 42px;
+        float:right;
+        }
+}
+
+
+
+
+#nav_bar {
+	margin-top:$gutter;
+	@include media-query(lap){
+        margin-top:10px;
+        }
+        @include media-query(palm){
+        margin-top:0px;
+        }
+
+}
+
+
+.menu-main-nav-container{
+	float:right;
+	@include media-query(palm){
+        float:none;
+        }
+}
+
+
+
+
+
+
+
+
+
+

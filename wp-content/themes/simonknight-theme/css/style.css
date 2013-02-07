@@ -1,0 +1,3360 @@
+@charset "UTF-8";
+/*------------------------------------*\
+    YOUR-PROJECT.CSS
+\*------------------------------------*/
+/**
+ * 
+ * sass --watch your-project.scss:your-project.min.css --style compressed
+ * 
+ * Here we set up some variables, include the inuit.css framework, then add our
+ * project-specific components afterwards.
+ */
+/*
+Theme Name:     simonknight-theme
+Theme URI:
+Description:    Themem for simonknight-co-uk
+Author:         Simon Knight
+Author URI:
+Template:       twentytwelve
+Version:        1
+*/
+/**
+ * Setup
+ */
+/*------------------------------------*\
+    $VARS
+\*------------------------------------*/
+/**
+ * Set up project-specific variables here which are then used throughout your
+ * build. These variables are automatically picked up by inuit.css so you should
+ * never need to modify any framework code....
+ */
+/**
+ * Debug mode will visually highlight any potential markup/accessibility quirks
+ * in the browser. Set to `true` or `false`.
+ */
+/**
+ * Do you want all elements to adopt `box-sizing:border-box;` as per
+ * paulirish.com/2012/box-sizing-border-box-ftw ?
+ */
+/**
+ * Base stuff
+ */
+/**
+ * How big would you like round corners to be by default?
+ */
+/**
+ * Responsiveness?
+ */
+/**
+ * Responsive push and pull produce a LOT of code, only turn them on if you...
+ * definitely need them.
+ */
+/**
+ * Tell inuit.css when breakpoints start.
+ */
+/**
+ * Font-sizes (in pixels). Refer to relevant sections for their implementations.
+ */
+/**
+ * Brand stuff
+ */
+/* Colours */
+/* Measurements */
+/**
+ * inuit.css will work these next ones out for you.
+ *
+ * Assign our `$base-line-height` to a new spacing var for more transparency.
+ */
+/* Drop Shadow control - used by H2 site title - using Compass @include single-text-shadow */
+/* Border radius variable - used by H3 in Hire me box - using Compass */
+/*------------------------------------*\
+    INUIT.CSS
+\*------------------------------------*/
+/**
+ * 
+ * inuitcss.com -- @inuitcss -- @csswizardry
+ * 
+ */
+/**
+ * inuit.css acts as a base stylesheet which you should extend with your own
+ * theme stylesheet.
+ * 
+ * inuit.css aims to do the heavy lifting; sorting objects and abstractions,
+ * design patterns and fiddly bits of CSS, whilst leaving as much design as
+ * possible to you. inuit.css is the scaffolding to your decorator.
+ * 
+ * This stylesheet is heavily documented and contains lots of comments, please
+ * take care to read and refer to them as you build. For further support please
+ * tweet at @inuitcss.
+ * 
+ * Owing to the amount of comments please only ever use minified CSS in
+ * production. This file is purely a dev document.
+ * 
+ * The table of contents below maps to section titles of the same name, to jump
+ * to any section simply run a find for $[SECTION-TITLE].
+ * 
+ * Most objects and abstractions come with a chunk of markup that you should be
+ * able to paste into any view to quickly see how the CSS works in conjunction
+ * with the correct HTML.
+ * 
+ * inuit.css is written to this standard: github.com/csswizardry/CSS-Guidelines
+ * 
+ * LICENSE
+ * 
+ * Copyright 2012 Harry Roberts
+ * 
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ * 
+ * http://apache.org/licenses/LICENSE-2.0
+ * 
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ * 
+ * Thank you for choosing inuit.css. May your floats remain cleared.
+ */
+/*------------------------------------*\
+    $CONTENTS
+\*------------------------------------*/
+/**
+ * CONTENTS............You’re reading it!
+ * WARNING.............Here be dragons!
+ * IMPORTS.............Begin importing the sections below
+ * 
+ * MIXINS..............Super-simple Sass stuff
+ * NORMALIZE...........normalize.css
+ * RESET...............Set some defaults
+ * CLEARFIX............
+ * SHARED..............Shared declarations
+ * 
+ * MAIN................High-level elements like `html`, `body`, etc.
+ * HEADINGS............Double-stranded heading hierarchy
+ * PARAGRAPHS..........
+ * SMALLPRINT..........Smaller text elements like `small`
+ * QUOTES..............
+ * CODE................
+ * LINKS...............
+ * LISTS...............
+ * IMAGES..............
+ * TABLES..............
+ * FORMS...............
+ * 
+ * GRIDS...............Fluid, proportional and nestable grids
+ * FLEXBOX.............Crudely emulate flexbox
+ * COLUMNS.............CSS3 columns
+ * NAV.................A simple abstraction to put a list in horizontal nav mode
+ * OPTIONS.............Grouped nav items
+ * PAGINATION..........Very stripped back, basic paginator
+ * BREADCRUMB..........Simple breadcrumb trail object
+ * MEDIA...............Media object
+ * MARGINALIA..........Simple marginalia content
+ * ISLAND..............Boxed off content
+ * BLOCK-LIST..........Blocky lists of content
+ * MATRIX..............Gridded lists
+ * SPLIT...............A simple split-in-two object
+ * THIS-OR-THIS........Options object
+ * LINK-COMPLEX........
+ * FLYOUT..............Flyout-on-hover object
+ * ARROWS..............CSS arrows
+ * SPRITE..............Generic spriting element
+ * ICON-TEXT...........Icon and text couplings
+ * BUTTONS.............
+ * LOZENGES............Basic lozenge styles
+ * RULES...............Horizontal rules
+ * STATS...............Simple stats object
+ * GREYBOX.............Wireframing styles
+ * 
+ * WIDTHS..............Width classes for use alongside the grid system etc.
+ * PUSH................Push classes for manipulating grids
+ * PULL................Pull classes for manipulating grids
+ * BRAND...............Helper class to apply brand treatment to elements
+ * HELPER..............A series of helper classes to use arbitrarily
+ * DEBUG...............Enable to add visual flags for debugging purposes
+ */
+/*------------------------------------*\
+    $WARNING
+\*------------------------------------*/
+/*
+ * inuit.css, being an OO framework, works in keeping with the open/closed
+ * principle. The variables you set previously are now being used throughout
+ * inuit.css to style everything we need for a base. Any custom styles SHOULD
+ * NOT be added or modified in inuit.css directly, but added via your theme
+ * stylesheet as per the open/closed principle:
+ * 
+ * csswizardry.com/2012/06/the-open-closed-principle-applied-to-css
+ * 
+ * Try not to edit any CSS beyond this point; if you find you need to do so
+ * it is a failing of the framework so please tweet at @inuitcss.
+ */
+/*------------------------------------*\
+    $IMPORTS
+\*------------------------------------*/
+/**
+ * Generic utility styles etc.
+ */
+/*------------------------------------*\
+    $MIXINS
+\*------------------------------------*/
+/**
+ * Create a fully formed type style (sizing and vertical rhythm) by passing in a
+ * single value, e.g.:
+ * 
+   `@include font-size(10px);`
+ * 
+ * Thanks to @redclov3r for the `line-height` Sass:
+ * twitter.com/redclov3r/status/250301539321798657
+ */
+/**
+ * Create vendor-prefixed CSS in one go, e.g.
+ * 
+   `@include vendor(border-radius, 4px);`
+ * 
+ */
+/**
+ * Create CSS keyframe animations for all vendors in one go, e.g.:
+ * 
+   .foo{
+       @include vendor(animation, shrink 3s);
+   }
+   
+   @include keyframe(shrink){
+       from{
+           font-size:5em;
+       }
+   }
+ * 
+ * Courtesy of @integralist: twitter.com/integralist/status/260484115315437569
+ */
+/**
+ * Force overly long spans of text to truncate, e.g.:
+ * 
+   `@include truncate(100%);`
+ * 
+ * Where `$truncation-boundary` is a united measurement.
+ */
+/**
+ * CSS arrows!!! But... before you read on, you might want to grab a coffee...
+ * 
+ * This mixin creates a CSS arrow on a given element. We can have the arrow
+ * appear in one of 12 locations, thus:
+ * 
+ *       01    02    03
+ *    +------------------+
+ * 12 |                  | 04
+ *    |                  |
+ * 11 |                  | 05
+ *    |                  |
+ * 10 |                  | 06
+ *    +------------------+
+ *       09    08    07
+ * 
+ * You pass this position in along with a desired arrow color and optional
+ * border color, for example:
+ * 
+ * `@include arrow(top, left, red)`
+ * 
+ * for just a single, red arrow, or:
+ * 
+ * `@include arrow(bottom, center, red, black)`
+ * 
+ * which will create a red triangle with a black border which sits at the bottom
+ * center of the element. Call the mixin thus: 
+ * 
+   .foo{
+       background-color:#BADA55;
+       border:1px solid #ACE;
+       @include arrow(top, left, #BADA55, #ACE);
+   }
+ * 
+ */
+/**
+ * Media query mixin.
+ *
+ * It’s not great practice to define solid breakpoints up-front, preferring to
+ * modify your design when it needs it, rather than assuming you’ll want a
+ * change at ‘mobile’. However, as inuit.css is required to take a hands off
+ * approach to design decisions, this is the closest we can get to baked-in
+ * responsiveness. It’s flexible enough to allow you to set your own breakpoints
+ * but solid enough to be frameworkified.
+ * 
+ * We define some broad breakpoints in our vars file that are picked up here
+ * for use in a simple media query mixin. Our options are:
+ *
+ * palm
+ * lap
+ * lap-and-up
+ * portable
+ * desk
+ * 
+ * Not using a media query will, naturally, serve styles to all devices.
+ * 
+ * `@include media-query(palm){ [styles here] }`
+ * 
+ * We work out your end points for you:
+ */
+/* normalize.css v2.0.1 | MIT License | git.io/normalize */
+/* ==========================================================================
+   HTML5 display definitions
+   ========================================================================== */
+/*
+ * Corrects `block` display not defined in IE 8/9.
+ */
+/* line 21, ../sass/inuit.css/generic/_normalize.scss */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+nav,
+section,
+summary {
+  display: block; }
+
+/*
+ * Corrects `inline-block` display not defined in IE 8/9.
+ */
+/* line 31, ../sass/inuit.css/generic/_normalize.scss */
+audio,
+canvas,
+video {
+  display: inline-block; }
+
+/*
+ * Prevents modern browsers from displaying `audio` without controls.
+ * Remove excess height in iOS 5 devices.
+ */
+/* line 40, ../sass/inuit.css/generic/_normalize.scss */
+audio:not([controls]) {
+  display: none;
+  height: 0; }
+
+/*
+ * Addresses styling for `hidden` attribute not present in IE 8/9.
+ */
+/* line 49, ../sass/inuit.css/generic/_normalize.scss */
+[hidden] {
+  display: none; }
+
+/* ==========================================================================
+   Base
+   ========================================================================== */
+/*
+ * 1. Sets default font family to sans-serif.
+ * 2. Prevents iOS text size adjust after orientation change, without disabling
+ *    user zoom.
+ */
+/* line 63, ../sass/inuit.css/generic/_normalize.scss */
+html {
+  font-family: sans-serif;
+  /* 1 */
+  -webkit-text-size-adjust: 100%;
+  /* 2 */
+  -ms-text-size-adjust: 100%;
+  /* 2 */ }
+
+/*
+ * Removes default margin.
+ */
+/* line 73, ../sass/inuit.css/generic/_normalize.scss */
+body {
+  margin: 0; }
+
+/* ==========================================================================
+   Links
+   ========================================================================== */
+/*
+ * Addresses `outline` inconsistency between Chrome and other browsers.
+ */
+/* line 85, ../sass/inuit.css/generic/_normalize.scss */
+a:focus {
+  outline: thin dotted; }
+
+/*
+ * Improves readability when focused and also mouse hovered in all browsers.
+ */
+/* line 94, ../sass/inuit.css/generic/_normalize.scss */
+a:active,
+a:hover {
+  outline: 0; }
+
+/* ==========================================================================
+   Typography
+   ========================================================================== */
+/*
+ * Addresses `h1` font sizes within `section` and `article` in Firefox 4+,
+ * Safari 5, and Chrome.
+ */
+/* line 107, ../sass/inuit.css/generic/_normalize.scss */
+h1 {
+  font-size: 2em; }
+
+/*
+ * Addresses styling not present in IE 8/9, Safari 5, and Chrome.
+ */
+/* line 115, ../sass/inuit.css/generic/_normalize.scss */
+abbr[title] {
+  border-bottom: 1px dotted; }
+
+/*
+ * Addresses style set to `bolder` in Firefox 4+, Safari 5, and Chrome.
+ */
+/* line 124, ../sass/inuit.css/generic/_normalize.scss */
+b,
+strong {
+  font-weight: bold; }
+
+/*
+ * Addresses styling not present in Safari 5 and Chrome.
+ */
+/* line 132, ../sass/inuit.css/generic/_normalize.scss */
+dfn {
+  font-style: italic; }
+
+/*
+ * Addresses styling not present in IE 8/9.
+ */
+/* line 140, ../sass/inuit.css/generic/_normalize.scss */
+mark {
+  background: #ff0;
+  color: #000; }
+
+/*
+ * Corrects font family set oddly in Safari 5 and Chrome.
+ */
+/* line 153, ../sass/inuit.css/generic/_normalize.scss */
+code,
+kbd,
+pre,
+samp {
+  font-family: monospace, serif;
+  font-size: 1em; }
+
+/*
+ * Improves readability of pre-formatted text in all browsers.
+ */
+/* line 162, ../sass/inuit.css/generic/_normalize.scss */
+pre {
+  white-space: pre;
+  white-space: pre-wrap;
+  word-wrap: break-word; }
+
+/*
+ * Sets consistent quote types.
+ */
+/* line 172, ../sass/inuit.css/generic/_normalize.scss */
+q {
+  quotes: "\201C" "\201D" "\2018" "\2019"; }
+
+/*
+ * Addresses inconsistent and variable font size in all browsers.
+ */
+/* line 180, ../sass/inuit.css/generic/_normalize.scss */
+small {
+  font-size: 80%; }
+
+/*
+ * Prevents `sub` and `sup` affecting `line-height` in all browsers.
+ */
+/* line 189, ../sass/inuit.css/generic/_normalize.scss */
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline; }
+
+/* line 196, ../sass/inuit.css/generic/_normalize.scss */
+sup {
+  top: -0.5em; }
+
+/* line 200, ../sass/inuit.css/generic/_normalize.scss */
+sub {
+  bottom: -0.25em; }
+
+/* ==========================================================================
+   Embedded content
+   ========================================================================== */
+/*
+ * Removes border when inside `a` element in IE 8/9.
+ */
+/* line 212, ../sass/inuit.css/generic/_normalize.scss */
+img {
+  border: 0; }
+
+/*
+ * Corrects overflow displayed oddly in IE 9.
+ */
+/* line 220, ../sass/inuit.css/generic/_normalize.scss */
+svg:not(:root) {
+  overflow: hidden; }
+
+/* ==========================================================================
+   Figures
+   ========================================================================== */
+/*
+ * Addresses margin not present in IE 8/9 and Safari 5.
+ */
+/* line 232, ../sass/inuit.css/generic/_normalize.scss */
+figure {
+  margin: 0; }
+
+/* ==========================================================================
+   Forms
+   ========================================================================== */
+/*
+ * Define consistent border, margin, and padding.
+ */
+/* line 244, ../sass/inuit.css/generic/_normalize.scss */
+fieldset {
+  border: 1px solid silver;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em; }
+
+/*
+ * 1. Corrects color not being inherited in IE 8/9.
+ * 2. Remove padding so people aren't caught out if they zero out fieldsets.
+ */
+/* line 255, ../sass/inuit.css/generic/_normalize.scss */
+legend {
+  border: 0;
+  /* 1 */
+  padding: 0;
+  /* 2 */ }
+
+/*
+ * 1. Corrects font family not being inherited in all browsers.
+ * 2. Corrects font size not being inherited in all browsers.
+ * 3. Addresses margins set differently in Firefox 4+, Safari 5, and Chrome
+ */
+/* line 269, ../sass/inuit.css/generic/_normalize.scss */
+button,
+input,
+select,
+textarea {
+  font-family: inherit;
+  /* 1 */
+  font-size: 100%;
+  /* 2 */
+  margin: 0;
+  /* 3 */ }
+
+/*
+ * Addresses Firefox 4+ setting `line-height` on `input` using `!important` in
+ * the UA stylesheet.
+ */
+/* line 281, ../sass/inuit.css/generic/_normalize.scss */
+button,
+input {
+  line-height: normal; }
+
+/*
+ * 1. Avoid the WebKit bug in Android 4.0.* where (2) destroys native `audio`
+ *    and `video` controls.
+ * 2. Corrects inability to style clickable `input` types in iOS.
+ * 3. Improves usability and consistency of cursor style between image-type
+ *    `input` and others.
+ */
+/* line 296, ../sass/inuit.css/generic/_normalize.scss */
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  -webkit-appearance: button;
+  /* 2 */
+  cursor: pointer;
+  /* 3 */ }
+
+/*
+ * Re-set default cursor for disabled elements.
+ */
+/* line 306, ../sass/inuit.css/generic/_normalize.scss */
+button[disabled],
+input[disabled] {
+  cursor: default; }
+
+/*
+ * 1. Addresses box sizing set to `content-box` in IE 8/9.
+ * 2. Removes excess padding in IE 8/9.
+ */
+/* line 316, ../sass/inuit.css/generic/_normalize.scss */
+input[type="checkbox"],
+input[type="radio"] {
+  box-sizing: border-box;
+  /* 1 */
+  padding: 0;
+  /* 2 */ }
+
+/*
+ * 1. Addresses `appearance` set to `searchfield` in Safari 5 and Chrome.
+ * 2. Addresses `box-sizing` set to `border-box` in Safari 5 and Chrome
+ *    (include `-moz` to future-proof).
+ */
+/* line 327, ../sass/inuit.css/generic/_normalize.scss */
+input[type="search"] {
+  -webkit-appearance: textfield;
+  /* 1 */
+  -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+  /* 2 */
+  box-sizing: content-box; }
+
+/*
+ * Removes inner padding and search cancel button in Safari 5 and Chrome
+ * on OS X.
+ */
+/* line 340, ../sass/inuit.css/generic/_normalize.scss */
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none; }
+
+/*
+ * Removes inner padding and border in Firefox 4+.
+ */
+/* line 349, ../sass/inuit.css/generic/_normalize.scss */
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0; }
+
+/*
+ * 1. Removes default vertical scrollbar in IE 8/9.
+ * 2. Improves readability and alignment in all browsers.
+ */
+/* line 359, ../sass/inuit.css/generic/_normalize.scss */
+textarea {
+  overflow: auto;
+  /* 1 */
+  vertical-align: top;
+  /* 2 */ }
+
+/* ==========================================================================
+   Tables
+   ========================================================================== */
+/*
+ * Remove most spacing between table cells.
+ */
+/* line 372, ../sass/inuit.css/generic/_normalize.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+/*------------------------------------*\
+    $RESET
+\*------------------------------------*/
+/**
+ * A more considered reset; more of a restart... 
+ * As per: csswizardry.com/2011/10/reset-restarted
+ */
+/**
+* Let’s make the box model all nice, shall we…?
+*/
+/* line 16, ../sass/inuit.css/generic/_reset.scss */
+*, *:before, *:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box; }
+
+/**
+ * The usual...
+ */
+/* line 30, ../sass/inuit.css/generic/_reset.scss */
+h1, h2, h3, h4, h5, h6,
+p, blockquote, pre,
+dl, dd, ol, ul,
+form, fieldset, legend,
+table, th, td, caption,
+hr {
+  margin: 0;
+  padding: 0; }
+
+/**
+ * Give a help cursor to elements that give extra info on `:hover`.
+ */
+/* line 38, ../sass/inuit.css/generic/_reset.scss */
+abbr[title], dfn[title] {
+  cursor: help; }
+
+/**
+ * Remove underlines from potentially troublesome elements.
+ */
+/* line 45, ../sass/inuit.css/generic/_reset.scss */
+a, u, ins {
+  text-decoration: none; }
+
+/**
+ * Apply faux underline via `border-bottom`.
+ */
+/* line 52, ../sass/inuit.css/generic/_reset.scss */
+ins {
+  border-bottom: 1px solid; }
+
+/**
+ * So that `alt` text is visually offset if images don’t load.
+ */
+/* line 59, ../sass/inuit.css/generic/_reset.scss */
+img {
+  font-style: italic; }
+
+/**
+ * Give form elements some cursor interactions...
+ */
+/* line 71, ../sass/inuit.css/generic/_reset.scss */
+label,
+input,
+textarea,
+button,
+select,
+option {
+  cursor: pointer; }
+
+/* line 77, ../sass/inuit.css/generic/_reset.scss */
+.text-input:active,
+.text-input:focus,
+textarea:active,
+textarea:focus {
+  cursor: text;
+  outline: none; }
+
+/*------------------------------------*\
+    $CLEARFIX
+\*------------------------------------*/
+/**
+ * Micro clearfix, as per: nicolasgallagher.com/micro-clearfix-hack
+ * Extend the clearfix class with Sass to avoid the `.cf` class appearing over
+ * and over in your markup.
+ */
+/* line 9, ../sass/inuit.css/generic/_clearfix.scss */
+.cf, .gw,
+.grid-wrapper, .nav, .media {
+  zoom: 1; }
+  /* line 13, ../sass/inuit.css/generic/_clearfix.scss */
+  .cf:before, .gw:before,
+  .grid-wrapper:before, .nav:before, .media:before, .cf:after, .gw:after,
+  .grid-wrapper:after, .nav:after, .media:after {
+    content: " ";
+    display: table; }
+  /* line 18, ../sass/inuit.css/generic/_clearfix.scss */
+  .cf:after, .gw:after,
+  .grid-wrapper:after, .nav:after, .media:after {
+    clear: both; }
+
+/*------------------------------------*\
+    $SHARED
+\*------------------------------------*/
+/**
+ * Where `margin-bottom` is concerned, this value will be the same as the
+ * base line-height. This allows us to keep a consistent vertical rhythm.
+ * As per: csswizardry.com/2012/06/single-direction-margin-declarations
+ */
+/**
+ * Base elements
+ */
+/* line 24, ../sass/inuit.css/generic/_shared.scss */
+h1, h2, h3, h4, h5, h6, hgroup,
+ul, ol, dl,
+blockquote, p, address,
+table,
+fieldset, figure,
+pre,
+.media,
+.island,
+.islet {
+  margin-bottom: 24px;
+  margin-bottom: 1.5rem; }
+  /* line 28, ../sass/inuit.css/generic/_shared.scss */
+  .islet h1, .islet h2, .islet h3, .islet h4, .islet h5, .islet h6, .islet hgroup, .islet
+  ul, .islet ol, .islet dl, .islet
+  blockquote, .islet p, .islet address, .islet
+  table, .islet
+  fieldset, .islet figure, .islet
+  pre, .islet
+  .media, .islet
+  .island, .islet
+  .islet {
+    margin-bottom: 12px;
+    margin-bottom: 0.75rem; }
+
+/**
+ * Doubled up `margin-bottom` helper class.
+ */
+/* line 38, ../sass/inuit.css/generic/_shared.scss */
+.landmark {
+  margin-bottom: 48px;
+  margin-bottom: 3rem; }
+
+/**
+ * `hr` elements only take up a few pixels, so we need to give them special
+ * treatment regarding vertical rhythm.
+ */
+/* line 48, ../sass/inuit.css/generic/_shared.scss */
+hr {
+  margin-bottom: 22px;
+  margin-bottom: 1.375rem; }
+
+/**
+ * Where `margin-left` is concerned we want to try and indent certain elements
+ * by a consistent amount. Define that amount once, here.
+ */
+/* line 58, ../sass/inuit.css/generic/_shared.scss */
+ul, ol, dd {
+  margin-left: 48px;
+  margin-left: 3rem; }
+
+/**
+ * Base styles; unclassed HTML elements etc.
+ */
+/*------------------------------------*\
+    $MAIN
+\*------------------------------------*/
+/* line 4, ../sass/inuit.css/base/_main.scss */
+html {
+  font: 1em/1.5 serif;
+  overflow-y: scroll;
+  min-height: 100%; }
+
+/*------------------------------------*\
+    $HEADINGS
+\*------------------------------------*/
+/**
+ * As per: csswizardry.com/2012/02/pragmatic-practical-font-sizing-in-css
+ * 
+ * When we define a heading we also define a corresponding class to go with it.
+ * This allows us to apply, say, `class=alpha` to a `h3`; a double-stranded
+ * heading hierarchy.
+ */
+/* line 11, ../sass/inuit.css/base/_headings.scss */
+h1, .alpha {
+  font-size: 36px;
+  font-size: 2.25rem;
+  line-height: 1.33333; }
+
+/* line 14, ../sass/inuit.css/base/_headings.scss */
+h2, .beta {
+  font-size: 30px;
+  font-size: 1.875rem;
+  line-height: 1.6; }
+
+/* line 17, ../sass/inuit.css/base/_headings.scss */
+h3, .gamma {
+  font-size: 24px;
+  font-size: 1.5rem;
+  line-height: 1; }
+
+/* line 20, ../sass/inuit.css/base/_headings.scss */
+h4, .delta {
+  font-size: 20px;
+  font-size: 1.25rem;
+  line-height: 1.2; }
+
+/* line 23, ../sass/inuit.css/base/_headings.scss */
+h5, .epsilon {
+  font-size: 16px;
+  font-size: 1rem;
+  line-height: 1.5; }
+
+/* line 26, ../sass/inuit.css/base/_headings.scss */
+h6, .zeta {
+  font-size: 14px;
+  font-size: 0.875rem;
+  line-height: 1.71429; }
+
+/**
+ * Heading groups and generic any-heading class.
+ * To target any heading of any level simply apply a class of `.hN`, e.g.:
+ * 
+   <hgroup>
+       <h1 class=hN>inuit.css</h1>
+       <h2 class=hN>Best. Framework. Ever!</h2>
+   </hgroup>
+ * 
+ */
+/* line 43, ../sass/inuit.css/base/_headings.scss */
+hgroup .hN {
+  margin-bottom: 0; }
+
+/**
+ * A series of classes for setting massive type; for use in heroes, mastheads,
+ * promos, etc.
+ */
+/* line 52, ../sass/inuit.css/base/_headings.scss */
+.giga {
+  font-size: 96px;
+  font-size: 6rem;
+  line-height: 1; }
+
+/* line 55, ../sass/inuit.css/base/_headings.scss */
+.mega {
+  font-size: 72px;
+  font-size: 4.5rem;
+  line-height: 1; }
+
+/* line 58, ../sass/inuit.css/base/_headings.scss */
+.kilo {
+  font-size: 48px;
+  font-size: 3rem;
+  line-height: 1; }
+
+/*------------------------------------*\
+    $PARAGRAPHS
+\*------------------------------------*/
+/**
+ * The `.lede` class is used to make the introductory text (usually a paragraph)
+ * of a document slightly larger.
+ */
+/* line 9, ../sass/inuit.css/base/_paragraphs.scss */
+.lede,
+.lead {
+  font-size: 18px;
+  font-size: 1.125rem;
+  line-height: 1.33333; }
+
+/*------------------------------------*\
+    $IMAGES
+\*------------------------------------*/
+/**
+ * Demo: jsfiddle.net/inuitcss/yMtur
+ */
+/* line 7, ../sass/inuit.css/base/_images.scss */
+img {
+  max-width: 100%;
+  height: auto; }
+
+/**
+ * Image placement variations.
+ */
+/* line 16, ../sass/inuit.css/base/_images.scss */
+.img--right {
+  float: right;
+  margin-bottom: 24px;
+  margin-left: 24px; }
+
+/* line 21, ../sass/inuit.css/base/_images.scss */
+.img--left {
+  float: left;
+  margin-right: 24px;
+  margin-bottom: 24px; }
+
+/* line 26, ../sass/inuit.css/base/_images.scss */
+.img--center {
+  display: block;
+  margin-right: auto;
+  margin-bottom: 24px;
+  margin-left: auto; }
+
+/**
+ * Keep your images on your baseline.
+ * 
+ * Please note, these will not work too nicely with fluid images and will
+ * distort when resized below a certain width. Use with caution.
+ */
+/* line 40, ../sass/inuit.css/base/_images.scss */
+.img--short {
+  height: 120px; }
+
+/* line 43, ../sass/inuit.css/base/_images.scss */
+.img--medium {
+  height: 240px; }
+
+/* line 46, ../sass/inuit.css/base/_images.scss */
+.img--tall {
+  height: 360px; }
+
+/**
+ * Images in `figure` elements.
+ */
+/* line 54, ../sass/inuit.css/base/_images.scss */
+figure > img {
+  display: block; }
+
+/*------------------------------------*\
+    $LISTS
+\*------------------------------------*/
+/**
+ * Remove vertical spacing from nested lists.
+ */
+/* line 9, ../sass/inuit.css/base/_lists.scss */
+li > ul,
+li > ol {
+  margin-bottom: 0; }
+
+/**
+ * Have a numbered `ul` without the semantics implied by using an `ol`.
+ */
+/*ul*/
+/* line 17, ../sass/inuit.css/base/_lists.scss */
+.numbered-list {
+  list-style-type: decimal; }
+
+/**
+ * Objects and abstractions
+ * 
+ * Single-line comment (//) out any objects you do not need in your project.
+ */
+/*------------------------------------*\
+    $GRIDS
+\*------------------------------------*/
+/**
+ * Fluid and nestable grid system, e.g.:
+ * 
+   <div class=gw>
+       
+       <div class="g  one-third">
+           <p>One third grid</p>
+       </div>
+       
+       <div class="g  two-thirds">
+           <p>Two thirds grid</p>
+       </div>
+       
+       <div class="g  one-half">
+           <p>One half grid</p>
+       </div>
+       
+       <div class="g  one-quarter">
+           <p>One quarter grid</p>
+       </div>
+       
+       <div class="g  one-quarter">
+           <p>One quarter grid</p>
+       </div>
+       
+   </div>
+ * 
+ * Demo: jsfiddle.net/inuitcss/CLYUC
+ * 
+ */
+/**
+ * Grid wrapper
+ * 
+ * Shorthand and verbose
+ */
+/* line 42, ../sass/inuit.css/objects/_grids.scss */
+.gw,
+.grid-wrapper {
+  /**
+   * Negative margin to negate the padding on the first grid child. 
+   */
+  margin-left: -24px;
+  /**
+   * The following declarations allow us to use the `.gw` class on lists.
+   */
+  list-style: none;
+  margin-bottom: 0; }
+
+/**
+ * Reverse grid order
+ * 
+   <div class="gw  gw--rev">
+       
+       <div class="g  one-third">
+           <p>Appears on the right</p>
+       </div>
+       
+       <div class="g  two-thirds">
+           <p>Appears on the left</p>
+       </div>
+       
+   </div>
+ * 
+ */
+/* line 73, ../sass/inuit.css/objects/_grids.scss */
+.gw--rev > .g,
+.grid-wrapper--rev > .grid {
+  float: right; }
+
+/**
+ * Very infrequently occuring grid wrappers as children of grid wrappers.
+ */
+/* line 82, ../sass/inuit.css/objects/_grids.scss */
+.gw > .gw,
+.grid-wrapper > .grid-wrapper {
+  margin-left: 0; }
+
+/**
+ * Grid
+ * 
+ * Shorthand and verbose
+ */
+/* line 93, ../sass/inuit.css/objects/_grids.scss */
+.g,
+.grid {
+  float: left;
+  padding-left: 24px; }
+
+/*------------------------------------*\
+    $COLUMNS
+\*------------------------------------*/
+/**
+ * Here we can set elements in columns of text using CSS3, e.g.:
+ * 
+   <p class=text-cols--2>
+ * 
+ * Demo: jsfiddle.net/inuitcss/E26Yd
+ * 
+ */
+/* line 12, ../sass/inuit.css/objects/_columns.scss */
+.text-cols--2, .text-cols--3, .text-cols--4, .text-cols--5 {
+  -webkit-column-gap: 24px;
+  -moz-column-gap: 24px;
+  -ms-column-gap: 24px;
+  -o-column-gap: 24px;
+  column-gap: 24px; }
+
+/* line 15, ../sass/inuit.css/objects/_columns.scss */
+.text-cols--2 {
+  -webkit-column-count: 2;
+  -moz-column-count: 2;
+  -ms-column-count: 2;
+  -o-column-count: 2;
+  column-count: 2; }
+
+/* line 16, ../sass/inuit.css/objects/_columns.scss */
+.text-cols--3 {
+  -webkit-column-count: 3;
+  -moz-column-count: 3;
+  -ms-column-count: 3;
+  -o-column-count: 3;
+  column-count: 3; }
+
+/* line 17, ../sass/inuit.css/objects/_columns.scss */
+.text-cols--4 {
+  -webkit-column-count: 4;
+  -moz-column-count: 4;
+  -ms-column-count: 4;
+  -o-column-count: 4;
+  column-count: 4; }
+
+/* line 18, ../sass/inuit.css/objects/_columns.scss */
+.text-cols--5 {
+  -webkit-column-count: 5;
+  -moz-column-count: 5;
+  -ms-column-count: 5;
+  -o-column-count: 5;
+  column-count: 5; }
+
+/*------------------------------------*\
+    $NAV
+\*------------------------------------*/
+/**
+ * Nav abstraction as per: csswizardry.com/2011/09/the-nav-abstraction
+ * When used on an `ol` or `ul`, this class throws the list into horizontal mode
+ * e.g.:
+ * 
+   <ul class=nav>
+       <li><a href=#>Home</a></li>
+       <li><a href=#>About</a></li>
+       <li><a href=#>Portfolio</a></li>
+       <li><a href=#>Contact</a></li>
+   </ul>
+ * 
+ * Demo: jsfiddle.net/inuitcss/Vnph4
+ * 
+ */
+/* line 19, ../sass/inuit.css/objects/_nav.scss */
+.nav {
+  list-style: none;
+  margin-left: 0; }
+  /* line 27, ../sass/inuit.css/objects/_nav.scss */
+  .nav > li,
+  .nav > li > a {
+    display: inline-block;
+    *display: inline;
+    zoom: 1; }
+
+/**
+ * `.nav--stacked` extends `.nav` and throws the list into vertical mode, e.g.:
+ * 
+   <ul class="nav  nav--stacked">
+       <li><a href=#>Home</a></li>
+       <li><a href=#>About</a></li>
+       <li><a href=#>Portfolio</a></li>
+       <li><a href=#>Contact</a></li>
+   </ul>
+ * 
+ */
+/* line 49, ../sass/inuit.css/objects/_nav.scss */
+.nav--stacked > li {
+  display: list-item; }
+  /* line 52, ../sass/inuit.css/objects/_nav.scss */
+  .nav--stacked > li > a {
+    display: block; }
+
+/**
+ * `.nav--banner` extends `.nav` and centres the list, e.g.:
+ * 
+   <ul class="nav  nav--banner">
+       <li><a href=#>Home</a></li>
+       <li><a href=#>About</a></li>
+       <li><a href=#>Portfolio</a></li>
+       <li><a href=#>Contact</a></li>
+   </ul>
+ * 
+ */
+/* line 70, ../sass/inuit.css/objects/_nav.scss */
+.nav--banner {
+  text-align: center; }
+
+/**
+ * Give nav links a big, blocky hit area. Extends `.nav` and needs whitespace
+ * caused by `inline-block` elements collapsing e.g.:
+ * 
+   <ul class="nav  nav--block">
+       <li><a href=#>Home</a></li><!--
+    --><li><a href=#>About</a></li><!--
+    --><li><a href=#>Portfolio</a></li><!--
+    --><li><a href=#>Contact</a></li>
+   </ul>
+ * 
+ */
+/* line 87, ../sass/inuit.css/objects/_nav.scss */
+.nav--block {
+  line-height: 1; }
+  /* line 92, ../sass/inuit.css/objects/_nav.scss */
+  .nav--block > li > a {
+    padding: 12px; }
+
+/**
+ * Force a nav to occupy 100% of the available width of its parent. Extends
+ * `.nav`, e.g.:
+ * 
+   <ul class="nav  nav--fit">
+       <li><a href=#>Home</a></li>
+       <li><a href=#>About</a></li>
+       <li><a href=#>Portfolio</a></li>
+       <li><a href=#>Contact</a></li>
+   </ul>
+ * 
+ * Thanks to @pimpl for this idea!
+ */
+/* line 112, ../sass/inuit.css/objects/_nav.scss */
+.nav--fit {
+  display: table;
+  width: 100%; }
+  /* line 116, ../sass/inuit.css/objects/_nav.scss */
+  .nav--fit > li {
+    display: table-cell; }
+    /* line 119, ../sass/inuit.css/objects/_nav.scss */
+    .nav--fit > li > a {
+      display: block; }
+
+/**
+ * Make a list of keywords. Extends `.nav`, e.g.:
+ * 
+   `<ul class="nav  nav--keywords>`
+ * 
+ */
+/* line 136, ../sass/inuit.css/objects/_nav.scss */
+.nav--keywords > li:after {
+  content: ", "; }
+/* line 140, ../sass/inuit.css/objects/_nav.scss */
+.nav--keywords > li:last-child:after {
+  display: none; }
+
+/*------------------------------------*\
+    $MEDIA
+\*------------------------------------*/
+/**
+ * Place any image- and text-like content side-by-side, as per:
+ * stubbornella.org/content/2010/06/25/the-media-object-saves-hundreds-of-lines-of-code
+ * E.g.:
+ * 
+   <div class=media>
+       <img src=http://placekitten.com/200/300 alt="" class=media__img>
+       <p class=media__body>Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+       sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+   </div>
+ * 
+ * Demo: jsfiddle.net/inuitcss/cf4Qs
+ * 
+ */
+/* line 18, ../sass/inuit.css/objects/_media.scss */
+.media {
+  display: block; }
+
+/* line 22, ../sass/inuit.css/objects/_media.scss */
+.media__img {
+  float: left;
+  margin-right: 24px; }
+
+/**
+ * Reversed image location (right instead of left).
+ */
+/* line 29, ../sass/inuit.css/objects/_media.scss */
+.media__img--rev {
+  float: right;
+  margin-left: 24px; }
+
+/* line 35, ../sass/inuit.css/objects/_media.scss */
+.media__img img,
+.media__img--rev img {
+  display: block; }
+
+/* line 39, ../sass/inuit.css/objects/_media.scss */
+.media__body {
+  overflow: hidden; }
+
+/* line 43, ../sass/inuit.css/objects/_media.scss */
+.media__body,
+.media__body > :last-child {
+  margin-bottom: 0; }
+
+/**
+ * `.img`s in `.islet`s need an appropriately sized margin.
+ */
+/* line 51, ../sass/inuit.css/objects/_media.scss */
+.islet .media__img {
+  margin-right: 12px; }
+
+/* line 54, ../sass/inuit.css/objects/_media.scss */
+.islet .media__img--rev {
+  margin-left: 12px; }
+
+/*------------------------------------*\
+    $ICON-TEXT
+\*------------------------------------*/
+/**
+ * For text-links etc that have an icon with them. Sometimes whitespace would
+ * suffice in creating a gap between the icon and text, for example:
+ * 
+   <a href=#>
+       <i class="s  s--help"></i> Help &amp; support
+   </a>
+ * 
+ * However we will sometimes want a larger, explicity set gap:
+   <a href=# class=icon-text>
+       <i class="icon-text__icon  s  s--help"></i>Help &amp; support
+   </a>
+ * 
+ * Demo: jsfiddle.net/inuitcss/Q6Lbf
+ * 
+ */
+/* line 20, ../sass/inuit.css/objects/_icon-text.scss */
+.icon-text > .icon-text__icon {
+  margin-right: 6px; }
+
+/**
+ * We can also reverse the direction of the margin for icons that appear to the
+ * right of the text content, thus:
+ *
+   <a href=# class=icon-text--rev>
+       Help &amp; support<i class="icon-text__icon  s  s--help"></i>
+   </a>
+ *
+ */
+/* line 34, ../sass/inuit.css/objects/_icon-text.scss */
+.icon-text--rev > .icon-text__icon {
+  margin-left: 6px; }
+
+/**
+ * Style trumps; helper and brand classes
+ */
+/*------------------------------------*\
+    $WIDTHS
+\*------------------------------------*/
+/**
+ * Sizes in human readable format. These are used in conjunction with other
+ * objects and abstractions found in inuit.css, most commonly the grid system
+ * and faux flexbox.
+ *
+ * We have a mixin to generate our widths and their breakpoint-specific
+ * variations.
+ */
+/**
+* Whole
+*/
+/* line 17, ../sass/inuit.css/generic/_widths.scss */
+.one-whole {
+  width: 100%; }
+
+/**
+* Halves
+*/
+/* line 23, ../sass/inuit.css/generic/_widths.scss */
+.one-half, .two-quarters, .three-sixths, .four-eighths, .five-tenths, .six-twelfths {
+  width: 50%; }
+
+/**
+* Thirds
+*/
+/* line 29, ../sass/inuit.css/generic/_widths.scss */
+.one-third, .two-sixths, .four-twelfths {
+  width: 33.333%; }
+
+/* line 30, ../sass/inuit.css/generic/_widths.scss */
+.two-thirds, .four-sixths, .eight-twelfths {
+  width: 66.666%; }
+
+/**
+* Quarters
+*/
+/* line 36, ../sass/inuit.css/generic/_widths.scss */
+.one-quarter, .two-eighths, .three-twelfths {
+  width: 25%; }
+
+/* line 38, ../sass/inuit.css/generic/_widths.scss */
+.three-quarters, .six-eighths, .nine-twelfths {
+  width: 75%; }
+
+/**
+* Fifths
+*/
+/* line 44, ../sass/inuit.css/generic/_widths.scss */
+.one-fifth, .two-tenths {
+  width: 20%; }
+
+/* line 45, ../sass/inuit.css/generic/_widths.scss */
+.two-fifths, .four-tenths {
+  width: 40%; }
+
+/* line 46, ../sass/inuit.css/generic/_widths.scss */
+.three-fifths, .six-tenths {
+  width: 60%; }
+
+/* line 47, ../sass/inuit.css/generic/_widths.scss */
+.four-fifths, .eight-tenths {
+  width: 80%; }
+
+/**
+* Sixths
+*/
+/* line 53, ../sass/inuit.css/generic/_widths.scss */
+.one-sixth, .two-twelfths {
+  width: 16.666%; }
+
+/* line 57, ../sass/inuit.css/generic/_widths.scss */
+.five-sixths, .ten-twelfths {
+  width: 83.333%; }
+
+/**
+* Eighths
+*/
+/* line 63, ../sass/inuit.css/generic/_widths.scss */
+.one-eighth {
+  width: 12.5%; }
+
+/* line 65, ../sass/inuit.css/generic/_widths.scss */
+.three-eighths {
+  width: 37.5%; }
+
+/* line 67, ../sass/inuit.css/generic/_widths.scss */
+.five-eighths {
+  width: 62.5%; }
+
+/* line 69, ../sass/inuit.css/generic/_widths.scss */
+.seven-eighths {
+  width: 87.5%; }
+
+/**
+* Tenths
+*/
+/* line 75, ../sass/inuit.css/generic/_widths.scss */
+.one-tenth {
+  width: 10%; }
+
+/* line 77, ../sass/inuit.css/generic/_widths.scss */
+.three-tenths {
+  width: 30%; }
+
+/* line 81, ../sass/inuit.css/generic/_widths.scss */
+.seven-tenths {
+  width: 70%; }
+
+/* line 83, ../sass/inuit.css/generic/_widths.scss */
+.nine-tenths {
+  width: 90%; }
+
+/**
+* Twelfths
+*/
+/* line 89, ../sass/inuit.css/generic/_widths.scss */
+.one-twelfth {
+  width: 8.333%; }
+
+/* line 93, ../sass/inuit.css/generic/_widths.scss */
+.five-twelfths {
+  width: 41.666%; }
+
+/* line 95, ../sass/inuit.css/generic/_widths.scss */
+.seven-twelfths {
+  width: 58.333%; }
+
+/* line 99, ../sass/inuit.css/generic/_widths.scss */
+.eleven-twelfths {
+  width: 91.666%; }
+
+/**
+ * If you have set `$responsive` to ‘true’ in `_vars.scss` then you now have
+ * access to these classes. You can define at which breakpoing you’d like an
+ * element to be a certain size, e.g.:
+ *
+ * `<div class="g  one-quarter  lap-one-half  palm-one-whole"> ... </div>`
+ *
+ * This would create a `div` that, at ‘desktop’ sizes, takes up a quarter of the
+ * horizontal space, a half of that space at ‘tablet’ sizes, and goes full width
+ * at ‘mobile’ sizes.
+ *
+ * Demo: jsfiddle.net/inuitcss/WS4Ge
+ *
+ */
+@media only screen and (max-width: 480px) {
+  /**
+  * Whole
+  */
+  /* line 17, ../sass/inuit.css/generic/_widths.scss */
+  .palm-one-whole {
+    width: 100%; }
+
+  /**
+  * Halves
+  */
+  /* line 23, ../sass/inuit.css/generic/_widths.scss */
+  .palm-one-half, .palm-two-quarters, .palm-three-sixths, .palm-four-eighths, .palm-five-tenths, .palm-six-twelfths {
+    width: 50%; }
+
+  /**
+  * Thirds
+  */
+  /* line 29, ../sass/inuit.css/generic/_widths.scss */
+  .palm-one-third, .palm-two-sixths, .palm-four-twelfths {
+    width: 33.333%; }
+
+  /* line 30, ../sass/inuit.css/generic/_widths.scss */
+  .palm-two-thirds, .palm-four-sixths, .palm-eight-twelfths {
+    width: 66.666%; }
+
+  /**
+  * Quarters
+  */
+  /* line 36, ../sass/inuit.css/generic/_widths.scss */
+  .palm-one-quarter, .palm-two-eighths, .palm-three-twelfths {
+    width: 25%; }
+
+  /* line 38, ../sass/inuit.css/generic/_widths.scss */
+  .palm-three-quarters, .palm-six-eighths, .palm-nine-twelfths {
+    width: 75%; }
+
+  /**
+  * Fifths
+  */
+  /* line 44, ../sass/inuit.css/generic/_widths.scss */
+  .palm-one-fifth, .palm-two-tenths {
+    width: 20%; }
+
+  /* line 45, ../sass/inuit.css/generic/_widths.scss */
+  .palm-two-fifths, .palm-four-tenths {
+    width: 40%; }
+
+  /* line 46, ../sass/inuit.css/generic/_widths.scss */
+  .palm-three-fifths, .palm-six-tenths {
+    width: 60%; }
+
+  /* line 47, ../sass/inuit.css/generic/_widths.scss */
+  .palm-four-fifths, .palm-eight-tenths {
+    width: 80%; }
+
+  /**
+  * Sixths
+  */
+  /* line 53, ../sass/inuit.css/generic/_widths.scss */
+  .palm-one-sixth, .palm-two-twelfths {
+    width: 16.666%; }
+
+  /* line 57, ../sass/inuit.css/generic/_widths.scss */
+  .palm-five-sixths, .palm-ten-twelfths {
+    width: 83.333%; }
+
+  /**
+  * Eighths
+  */
+  /* line 63, ../sass/inuit.css/generic/_widths.scss */
+  .palm-one-eighth {
+    width: 12.5%; }
+
+  /* line 65, ../sass/inuit.css/generic/_widths.scss */
+  .palm-three-eighths {
+    width: 37.5%; }
+
+  /* line 67, ../sass/inuit.css/generic/_widths.scss */
+  .palm-five-eighths {
+    width: 62.5%; }
+
+  /* line 69, ../sass/inuit.css/generic/_widths.scss */
+  .palm-seven-eighths {
+    width: 87.5%; }
+
+  /**
+  * Tenths
+  */
+  /* line 75, ../sass/inuit.css/generic/_widths.scss */
+  .palm-one-tenth {
+    width: 10%; }
+
+  /* line 77, ../sass/inuit.css/generic/_widths.scss */
+  .palm-three-tenths {
+    width: 30%; }
+
+  /* line 81, ../sass/inuit.css/generic/_widths.scss */
+  .palm-seven-tenths {
+    width: 70%; }
+
+  /* line 83, ../sass/inuit.css/generic/_widths.scss */
+  .palm-nine-tenths {
+    width: 90%; }
+
+  /**
+  * Twelfths
+  */
+  /* line 89, ../sass/inuit.css/generic/_widths.scss */
+  .palm-one-twelfth {
+    width: 8.333%; }
+
+  /* line 93, ../sass/inuit.css/generic/_widths.scss */
+  .palm-five-twelfths {
+    width: 41.666%; }
+
+  /* line 95, ../sass/inuit.css/generic/_widths.scss */
+  .palm-seven-twelfths {
+    width: 58.333%; }
+
+  /* line 99, ../sass/inuit.css/generic/_widths.scss */
+  .palm-eleven-twelfths {
+    width: 91.666%; } }
+@media only screen and (min-width: 481px) and (max-width: 959px) {
+  /**
+  * Whole
+  */
+  /* line 17, ../sass/inuit.css/generic/_widths.scss */
+  .lap-one-whole {
+    width: 100%; }
+
+  /**
+  * Halves
+  */
+  /* line 23, ../sass/inuit.css/generic/_widths.scss */
+  .lap-one-half, .lap-two-quarters, .lap-three-sixths, .lap-four-eighths, .lap-five-tenths, .lap-six-twelfths {
+    width: 50%; }
+
+  /**
+  * Thirds
+  */
+  /* line 29, ../sass/inuit.css/generic/_widths.scss */
+  .lap-one-third, .lap-two-sixths, .lap-four-twelfths {
+    width: 33.333%; }
+
+  /* line 30, ../sass/inuit.css/generic/_widths.scss */
+  .lap-two-thirds, .lap-four-sixths, .lap-eight-twelfths {
+    width: 66.666%; }
+
+  /**
+  * Quarters
+  */
+  /* line 36, ../sass/inuit.css/generic/_widths.scss */
+  .lap-one-quarter, .lap-two-eighths, .lap-three-twelfths {
+    width: 25%; }
+
+  /* line 38, ../sass/inuit.css/generic/_widths.scss */
+  .lap-three-quarters, .lap-six-eighths, .lap-nine-twelfths {
+    width: 75%; }
+
+  /**
+  * Fifths
+  */
+  /* line 44, ../sass/inuit.css/generic/_widths.scss */
+  .lap-one-fifth, .lap-two-tenths {
+    width: 20%; }
+
+  /* line 45, ../sass/inuit.css/generic/_widths.scss */
+  .lap-two-fifths, .lap-four-tenths {
+    width: 40%; }
+
+  /* line 46, ../sass/inuit.css/generic/_widths.scss */
+  .lap-three-fifths, .lap-six-tenths {
+    width: 60%; }
+
+  /* line 47, ../sass/inuit.css/generic/_widths.scss */
+  .lap-four-fifths, .lap-eight-tenths {
+    width: 80%; }
+
+  /**
+  * Sixths
+  */
+  /* line 53, ../sass/inuit.css/generic/_widths.scss */
+  .lap-one-sixth, .lap-two-twelfths {
+    width: 16.666%; }
+
+  /* line 57, ../sass/inuit.css/generic/_widths.scss */
+  .lap-five-sixths, .lap-ten-twelfths {
+    width: 83.333%; }
+
+  /**
+  * Eighths
+  */
+  /* line 63, ../sass/inuit.css/generic/_widths.scss */
+  .lap-one-eighth {
+    width: 12.5%; }
+
+  /* line 65, ../sass/inuit.css/generic/_widths.scss */
+  .lap-three-eighths {
+    width: 37.5%; }
+
+  /* line 67, ../sass/inuit.css/generic/_widths.scss */
+  .lap-five-eighths {
+    width: 62.5%; }
+
+  /* line 69, ../sass/inuit.css/generic/_widths.scss */
+  .lap-seven-eighths {
+    width: 87.5%; }
+
+  /**
+  * Tenths
+  */
+  /* line 75, ../sass/inuit.css/generic/_widths.scss */
+  .lap-one-tenth {
+    width: 10%; }
+
+  /* line 77, ../sass/inuit.css/generic/_widths.scss */
+  .lap-three-tenths {
+    width: 30%; }
+
+  /* line 81, ../sass/inuit.css/generic/_widths.scss */
+  .lap-seven-tenths {
+    width: 70%; }
+
+  /* line 83, ../sass/inuit.css/generic/_widths.scss */
+  .lap-nine-tenths {
+    width: 90%; }
+
+  /**
+  * Twelfths
+  */
+  /* line 89, ../sass/inuit.css/generic/_widths.scss */
+  .lap-one-twelfth {
+    width: 8.333%; }
+
+  /* line 93, ../sass/inuit.css/generic/_widths.scss */
+  .lap-five-twelfths {
+    width: 41.666%; }
+
+  /* line 95, ../sass/inuit.css/generic/_widths.scss */
+  .lap-seven-twelfths {
+    width: 58.333%; }
+
+  /* line 99, ../sass/inuit.css/generic/_widths.scss */
+  .lap-eleven-twelfths {
+    width: 91.666%; } }
+@media only screen and (max-width: 959px) {
+  /**
+  * Whole
+  */
+  /* line 17, ../sass/inuit.css/generic/_widths.scss */
+  .portable-one-whole {
+    width: 100%; }
+
+  /**
+  * Halves
+  */
+  /* line 23, ../sass/inuit.css/generic/_widths.scss */
+  .portable-one-half, .portable-two-quarters, .portable-three-sixths, .portable-four-eighths, .portable-five-tenths, .portable-six-twelfths {
+    width: 50%; }
+
+  /**
+  * Thirds
+  */
+  /* line 29, ../sass/inuit.css/generic/_widths.scss */
+  .portable-one-third, .portable-two-sixths, .portable-four-twelfths {
+    width: 33.333%; }
+
+  /* line 30, ../sass/inuit.css/generic/_widths.scss */
+  .portable-two-thirds, .portable-four-sixths, .portable-eight-twelfths {
+    width: 66.666%; }
+
+  /**
+  * Quarters
+  */
+  /* line 36, ../sass/inuit.css/generic/_widths.scss */
+  .portable-one-quarter, .portable-two-eighths, .portable-three-twelfths {
+    width: 25%; }
+
+  /* line 38, ../sass/inuit.css/generic/_widths.scss */
+  .portable-three-quarters, .portable-six-eighths, .portable-nine-twelfths {
+    width: 75%; }
+
+  /**
+  * Fifths
+  */
+  /* line 44, ../sass/inuit.css/generic/_widths.scss */
+  .portable-one-fifth, .portable-two-tenths {
+    width: 20%; }
+
+  /* line 45, ../sass/inuit.css/generic/_widths.scss */
+  .portable-two-fifths, .portable-four-tenths {
+    width: 40%; }
+
+  /* line 46, ../sass/inuit.css/generic/_widths.scss */
+  .portable-three-fifths, .portable-six-tenths {
+    width: 60%; }
+
+  /* line 47, ../sass/inuit.css/generic/_widths.scss */
+  .portable-four-fifths, .portable-eight-tenths {
+    width: 80%; }
+
+  /**
+  * Sixths
+  */
+  /* line 53, ../sass/inuit.css/generic/_widths.scss */
+  .portable-one-sixth, .portable-two-twelfths {
+    width: 16.666%; }
+
+  /* line 57, ../sass/inuit.css/generic/_widths.scss */
+  .portable-five-sixths, .portable-ten-twelfths {
+    width: 83.333%; }
+
+  /**
+  * Eighths
+  */
+  /* line 63, ../sass/inuit.css/generic/_widths.scss */
+  .portable-one-eighth {
+    width: 12.5%; }
+
+  /* line 65, ../sass/inuit.css/generic/_widths.scss */
+  .portable-three-eighths {
+    width: 37.5%; }
+
+  /* line 67, ../sass/inuit.css/generic/_widths.scss */
+  .portable-five-eighths {
+    width: 62.5%; }
+
+  /* line 69, ../sass/inuit.css/generic/_widths.scss */
+  .portable-seven-eighths {
+    width: 87.5%; }
+
+  /**
+  * Tenths
+  */
+  /* line 75, ../sass/inuit.css/generic/_widths.scss */
+  .portable-one-tenth {
+    width: 10%; }
+
+  /* line 77, ../sass/inuit.css/generic/_widths.scss */
+  .portable-three-tenths {
+    width: 30%; }
+
+  /* line 81, ../sass/inuit.css/generic/_widths.scss */
+  .portable-seven-tenths {
+    width: 70%; }
+
+  /* line 83, ../sass/inuit.css/generic/_widths.scss */
+  .portable-nine-tenths {
+    width: 90%; }
+
+  /**
+  * Twelfths
+  */
+  /* line 89, ../sass/inuit.css/generic/_widths.scss */
+  .portable-one-twelfth {
+    width: 8.333%; }
+
+  /* line 93, ../sass/inuit.css/generic/_widths.scss */
+  .portable-five-twelfths {
+    width: 41.666%; }
+
+  /* line 95, ../sass/inuit.css/generic/_widths.scss */
+  .portable-seven-twelfths {
+    width: 58.333%; }
+
+  /* line 99, ../sass/inuit.css/generic/_widths.scss */
+  .portable-eleven-twelfths {
+    width: 91.666%; } }
+@media only screen and (min-width: 960px) {
+  /**
+  * Whole
+  */
+  /* line 17, ../sass/inuit.css/generic/_widths.scss */
+  .desk-one-whole {
+    width: 100%; }
+
+  /**
+  * Halves
+  */
+  /* line 23, ../sass/inuit.css/generic/_widths.scss */
+  .desk-one-half, .desk-two-quarters, .desk-three-sixths, .desk-four-eighths, .desk-five-tenths, .desk-six-twelfths {
+    width: 50%; }
+
+  /**
+  * Thirds
+  */
+  /* line 29, ../sass/inuit.css/generic/_widths.scss */
+  .desk-one-third, .desk-two-sixths, .desk-four-twelfths {
+    width: 33.333%; }
+
+  /* line 30, ../sass/inuit.css/generic/_widths.scss */
+  .desk-two-thirds, .desk-four-sixths, .desk-eight-twelfths {
+    width: 66.666%; }
+
+  /**
+  * Quarters
+  */
+  /* line 36, ../sass/inuit.css/generic/_widths.scss */
+  .desk-one-quarter, .desk-two-eighths, .desk-three-twelfths {
+    width: 25%; }
+
+  /* line 38, ../sass/inuit.css/generic/_widths.scss */
+  .desk-three-quarters, .desk-six-eighths, .desk-nine-twelfths {
+    width: 75%; }
+
+  /**
+  * Fifths
+  */
+  /* line 44, ../sass/inuit.css/generic/_widths.scss */
+  .desk-one-fifth, .desk-two-tenths {
+    width: 20%; }
+
+  /* line 45, ../sass/inuit.css/generic/_widths.scss */
+  .desk-two-fifths, .desk-four-tenths {
+    width: 40%; }
+
+  /* line 46, ../sass/inuit.css/generic/_widths.scss */
+  .desk-three-fifths, .desk-six-tenths {
+    width: 60%; }
+
+  /* line 47, ../sass/inuit.css/generic/_widths.scss */
+  .desk-four-fifths, .desk-eight-tenths {
+    width: 80%; }
+
+  /**
+  * Sixths
+  */
+  /* line 53, ../sass/inuit.css/generic/_widths.scss */
+  .desk-one-sixth, .desk-two-twelfths {
+    width: 16.666%; }
+
+  /* line 57, ../sass/inuit.css/generic/_widths.scss */
+  .desk-five-sixths, .desk-ten-twelfths {
+    width: 83.333%; }
+
+  /**
+  * Eighths
+  */
+  /* line 63, ../sass/inuit.css/generic/_widths.scss */
+  .desk-one-eighth {
+    width: 12.5%; }
+
+  /* line 65, ../sass/inuit.css/generic/_widths.scss */
+  .desk-three-eighths {
+    width: 37.5%; }
+
+  /* line 67, ../sass/inuit.css/generic/_widths.scss */
+  .desk-five-eighths {
+    width: 62.5%; }
+
+  /* line 69, ../sass/inuit.css/generic/_widths.scss */
+  .desk-seven-eighths {
+    width: 87.5%; }
+
+  /**
+  * Tenths
+  */
+  /* line 75, ../sass/inuit.css/generic/_widths.scss */
+  .desk-one-tenth {
+    width: 10%; }
+
+  /* line 77, ../sass/inuit.css/generic/_widths.scss */
+  .desk-three-tenths {
+    width: 30%; }
+
+  /* line 81, ../sass/inuit.css/generic/_widths.scss */
+  .desk-seven-tenths {
+    width: 70%; }
+
+  /* line 83, ../sass/inuit.css/generic/_widths.scss */
+  .desk-nine-tenths {
+    width: 90%; }
+
+  /**
+  * Twelfths
+  */
+  /* line 89, ../sass/inuit.css/generic/_widths.scss */
+  .desk-one-twelfth {
+    width: 8.333%; }
+
+  /* line 93, ../sass/inuit.css/generic/_widths.scss */
+  .desk-five-twelfths {
+    width: 41.666%; }
+
+  /* line 95, ../sass/inuit.css/generic/_widths.scss */
+  .desk-seven-twelfths {
+    width: 58.333%; }
+
+  /* line 99, ../sass/inuit.css/generic/_widths.scss */
+  .desk-eleven-twelfths {
+    width: 91.666%; } }
+/* endif */
+/*------------------------------------*\
+    $BRAND
+\*------------------------------------*/
+/**
+ * `.brand` is a quick and simple way to apply your brand face and/or color to
+ * any element using a handy helper class.
+ */
+/* line 8, ../sass/inuit.css/generic/_brand.scss */
+.brand {
+  font-family: "Signika", sans-serif!important;
+  color: #ec145b!important; }
+
+/* line 12, ../sass/inuit.css/generic/_brand.scss */
+.brand-face {
+  font-family: "Signika", sans-serif!important; }
+
+/* line 16, ../sass/inuit.css/generic/_brand.scss */
+.brand-color,
+.brand-colour {
+  color: #ec145b!important; }
+
+/**
+ * She’s all yours, cap’n... Begin importing your stuff here.
+ */
+/*------------------------------------*\
+$PAGE
+\*------------------------------------*/
+/* line 5, ../sass/ui/page.scss */
+html {
+  font-family: "Signika", sans-serif;
+  font-weight: 300;
+  color: black;
+  background-color: white;
+  background-image: url("http://www.simonknight.co.uk/wp-content/themes/simonknight-theme/images/bg.png");
+  background-repeat: repeat-x; }
+  @media only screen and (min-width: 481px) and (max-width: 959px) {
+    /* line 5, ../sass/ui/page.scss */
+    html {
+      background-image: url("http://www.simonknight.co.uk/wp-content/themes/simonknight-theme/images/bg-lap.png"); } }
+
+/* line 21, ../sass/ui/page.scss */
+body {
+  max-width: 960px;
+  padding: 20px 10px 10px 10px;
+  font-size: 16px;
+  line-height: 20px;
+  background-color: white;
+  margin: 0px auto; }
+  @media only screen and (max-width: 959px) {
+    /* line 21, ../sass/ui/page.scss */
+    body {
+      padding-right: 12px;
+      padding-left: 12px;
+      max-width: 720px; } }
+
+/*------------------------------------*\
+$HEADER
+\*------------------------------------*/
+/* line 5, ../sass/ui/page-header.scss */
+#header {
+  border-style: none; }
+
+/* line 10, ../sass/ui/page-header.scss */
+#navbar {
+  width: 80%;
+  height: 23px; }
+  /* line 14, ../sass/ui/page-header.scss */
+  #navbar ul {
+    list-style-type: none; }
+  /* line 18, ../sass/ui/page-header.scss */
+  #navbar li {
+    float: left; }
+    /* line 21, ../sass/ui/page-header.scss */
+    #navbar li a {
+      font-weight: bold; }
+
+/* line 28, ../sass/ui/page-header.scss */
+.menu {
+  position: relative;
+  list-style: none;
+  z-index: 50;
+  background: white;
+  margin-bottom: 20px;
+  margin-left: 0; }
+  /* line 35, ../sass/ui/page-header.scss */
+  .menu ul {
+    position: absolute;
+    visibility: hidden;
+    z-index: 110; }
+    /* line 39, ../sass/ui/page-header.scss */
+    .menu ul ul {
+      position: absolute;
+      top: 0; }
+    /* line 40, ../sass/ui/page-header.scss */
+    .menu ul li {
+      clear: both; }
+    /* line 41, ../sass/ui/page-header.scss */
+    .menu ul a {
+      width: auto; }
+  /* line 43, ../sass/ui/page-header.scss */
+  .menu li {
+    position: relative;
+    float: left;
+    padding-top: 5px; }
+    @media only screen and (max-width: 480px) {
+      /* line 43, ../sass/ui/page-header.scss */
+      .menu li {
+        float: none; } }
+  /* line 51, ../sass/ui/page-header.scss */
+  .menu a {
+    color: #ec145b;
+    display: block;
+    font-size: 18px;
+    padding-top: 9px;
+    padding-right: 11px;
+    padding-bottom: 9px;
+    padding-left: 11px;
+    font-weight: 300;
+    -webkit-transition-property: all;
+    -moz-transition-property: all;
+    -o-transition-property: all;
+    transition-property: all;
+    -webkit-transition-duration: 0.2s;
+    -moz-transition-duration: 0.2s;
+    -o-transition-duration: 0.2s;
+    transition-duration: 0.2s;
+    -webkit-transition-timing-function: ease-in;
+    -moz-transition-timing-function: ease-in;
+    -o-transition-timing-function: ease-in;
+    transition-timing-function: ease-in; }
+    @media only screen and (min-width: 481px) and (max-width: 959px) {
+      /* line 51, ../sass/ui/page-header.scss */
+      .menu a {
+        padding: 9px 10px;
+        font-size: 14px; } }
+    @media only screen and (max-width: 480px) {
+      /* line 51, ../sass/ui/page-header.scss */
+      .menu a {
+        color: white;
+        background-color: #ec145b; } }
+    /* line 72, ../sass/ui/page-header.scss */
+    .menu a:hover {
+      color: #111;
+      background-color: #dcddde;
+      -moz-border-radius: 4px;
+      -webkit-border-radius: 4px;
+      border-radius: 4px; }
+  /* line 79, ../sass/ui/page-header.scss */
+  .menu:after {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden; }
+  @media only screen and (max-width: 480px) {
+    /* line 28, ../sass/ui/page-header.scss */
+    .menu {
+      display: none;
+      float: none; } }
+
+/* line 95, ../sass/ui/page-header.scss */
+.current-menu-item a, .current-post-parent a {
+  color: black; }
+  @media only screen and (max-width: 480px) {
+    /* line 95, ../sass/ui/page-header.scss */
+    .current-menu-item a, .current-post-parent a {
+      background-color: black;
+      color: white; } }
+
+/* line 106, ../sass/ui/page-header.scss */
+#menu-icon {
+  display: none;
+  /* hide menu icon initially */ }
+  @media only screen and (max-width: 480px) {
+    /* line 106, ../sass/ui/page-header.scss */
+    #menu-icon {
+      background: #303030 url(images/mobile-menu-icon.png) no-repeat 0 0;
+      cursor: pointer;
+      display: inline-block;
+      height: 30px;
+      margin: 10px 0px 0px 10px;
+      margin-top: -113px;
+      width: 42px;
+      float: right; } }
+
+/* line 123, ../sass/ui/page-header.scss */
+#nav_bar {
+  margin-top: 20px; }
+  @media only screen and (min-width: 481px) and (max-width: 959px) {
+    /* line 123, ../sass/ui/page-header.scss */
+    #nav_bar {
+      margin-top: 10px; } }
+  @media only screen and (max-width: 480px) {
+    /* line 123, ../sass/ui/page-header.scss */
+    #nav_bar {
+      margin-top: 0px; } }
+
+/* line 135, ../sass/ui/page-header.scss */
+.menu-main-nav-container {
+  float: right; }
+  @media only screen and (max-width: 480px) {
+    /* line 135, ../sass/ui/page-header.scss */
+    .menu-main-nav-container {
+      float: none; } }
+
+/*------------------------------------*\
+$FOOTER
+\*------------------------------------*/
+/* line 5, ../sass/ui/page-footer.scss */
+.footer {
+  background-color: #818285;
+  color: white;
+  padding: 20px;
+  margin-top: 20px; }
+  /* line 11, ../sass/ui/page-footer.scss */
+  .footer p {
+    margin-bottom: 0;
+    font-size: 14px;
+    font-size: 0.875rem;
+    line-height: 1.71429; }
+  /* line 16, ../sass/ui/page-footer.scss */
+  .footer a {
+    color: white; }
+
+/* line 21, ../sass/ui/page-footer.scss */
+.social {
+  float: right;
+  display: block;
+  margin-left: 10px; }
+
+/*------------------------------------*\
+$TYPOGRAPHY
+\*------------------------------------*/
+/* line 4, ../sass/ui/typography.scss */
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 300; }
+
+/* line 8, ../sass/ui/typography.scss */
+a {
+  color: #ec145b;
+  text-decoration: none; }
+
+/* line 13, ../sass/ui/typography.scss */
+p {
+  font-size: 17px;
+  font-size: 1.0625rem;
+  line-height: 1.41176;
+  padding: 0 10px;
+  margin-bottom: 1.25em; }
+  @media only screen and (min-width: 481px) and (max-width: 959px) {
+    /* line 13, ../sass/ui/typography.scss */
+    p {
+      font-size: 14px;
+      font-size: 0.875rem;
+      line-height: 1.71429;
+      margin-bottom: 15px;
+      padding: 0 3px; } }
+  @media only screen and (max-width: 480px) {
+    /* line 13, ../sass/ui/typography.scss */
+    p {
+      font-size: 19px;
+      font-size: 1.1875rem;
+      line-height: 1.26316;
+      line-height: 28px;
+      padding: 0 15px;
+      text-align: left; } }
+
+/* line 32, ../sass/ui/typography.scss */
+.understand p, .design p, .code p {
+  /* Homepage paragraph columns */
+  padding: 0 15px; }
+  @media only screen and (min-width: 481px) and (max-width: 959px) {
+    /* line 32, ../sass/ui/typography.scss */
+    .understand p, .design p, .code p {
+      font-size: 13px;
+      font-size: 0.8125rem;
+      line-height: 1.84615;
+      line-height: 20px;
+      padding: 0px; } }
+
+/* line 44, ../sass/ui/typography.scss */
+p.media__body {
+  padding-left: 0; }
+  @media only screen and (max-width: 480px) {
+    /* line 44, ../sass/ui/typography.scss */
+    p.media__body {
+      padding: 0 15px; } }
+
+/* line 53, ../sass/ui/typography.scss */
+p.comment-notes {
+  font-size: 14px;
+  font-size: 0.875rem;
+  line-height: 1.71429; }
+
+/* line 58, ../sass/ui/typography.scss */
+p.form-allowed-tags {
+  display: none; }
+
+/* line 63, ../sass/ui/typography.scss */
+h1 {
+  font-size: 52px;
+  font-size: 3.25rem;
+  line-height: 1.38462;
+  font-weight: 400;
+  margin-bottom: 20px; }
+  @media only screen and (min-width: 481px) and (max-width: 959px) {
+    /* line 63, ../sass/ui/typography.scss */
+    h1 {
+      font-size: 38px;
+      font-size: 2.375rem;
+      line-height: 1.26316;
+      margin-bottom: 10px; } }
+  @media only screen and (max-width: 480px) {
+    /* line 63, ../sass/ui/typography.scss */
+    h1 {
+      font-size: 34px;
+      font-size: 2.125rem;
+      line-height: 1.41176;
+      margin-top: 15px;
+      margin-bottom: 40px; } }
+
+@media only screen and (max-width: 480px) {
+  /* line 80, ../sass/ui/typography.scss */
+  .home h1 {
+    margin-top: 0px;
+    margin-bottom: 20px; } }
+
+/* line 88, ../sass/ui/typography.scss */
+.category-blog h1 {
+  font-size: 32px;
+  font-size: 2rem;
+  line-height: 1.5;
+  line-height: 32px; }
+  @media only screen and (max-width: 480px) {
+    /* line 88, ../sass/ui/typography.scss */
+    .category-blog h1 {
+      margin-bottom: 0px;
+      font-size: 26px;
+      font-size: 1.625rem;
+      line-height: 1.84615;
+      padding: 0px 15px;
+      text-align: left; } }
+
+/* line 101, ../sass/ui/typography.scss */
+h2.archive-title {
+  /* Blog category title */
+  font-size: 52px;
+  font-size: 3.25rem;
+  line-height: 1.38462;
+  font-weight: 400; }
+  @media only screen and (min-width: 481px) and (max-width: 959px) {
+    /* line 101, ../sass/ui/typography.scss */
+    h2.archive-title {
+      font-size: 38px;
+      font-size: 2.375rem;
+      line-height: 1.26316; } }
+  @media only screen and (max-width: 480px) {
+    /* line 101, ../sass/ui/typography.scss */
+    h2.archive-title {
+      font-size: 34px;
+      font-size: 2.125rem;
+      line-height: 1.41176; } }
+
+/* line 116, ../sass/ui/typography.scss */
+h3 {
+  font-size: 27px;
+  font-size: 1.6875rem;
+  line-height: 1.77778;
+  font-weight: 400;
+  color: #ec145b;
+  margin-top: 10px;
+  margin-bottom: 10px; }
+  @media only screen and (min-width: 481px) and (max-width: 959px) {
+    /* line 116, ../sass/ui/typography.scss */
+    h3 {
+      font-size: 23px;
+      font-size: 1.4375rem;
+      line-height: 1.04348; } }
+
+/* line 128, ../sass/ui/typography.scss */
+.media h3 {
+  margin-top: 0;
+  margin-bottom: 0; }
+  @media only screen and (min-width: 481px) and (max-width: 959px) {
+    /* line 128, ../sass/ui/typography.scss */
+    .media h3 {
+      margin-bottom: 10px; } }
+
+/* line 137, ../sass/ui/typography.scss */
+.hire h3 {
+  text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.4);
+  /* Settings declared in Vars, Compass include feature */
+  font-size: 40px;
+  font-size: 2.5rem;
+  line-height: 1.2;
+  font-family: "Pacifico", sans-serif;
+  color: white;
+  background: #ec145b;
+  padding: 10px 20px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  border-radius: 10px;
+  margin-top: -10px; }
+  @media only screen and (min-width: 481px) and (max-width: 959px) {
+    /* line 137, ../sass/ui/typography.scss */
+    .hire h3 {
+      font-size: 29px;
+      font-size: 1.8125rem;
+      line-height: 1.65517;
+      line-height: 34px; } }
+  @media only screen and (max-width: 480px) {
+    /* line 137, ../sass/ui/typography.scss */
+    .hire h3 {
+      padding: 20px 10px;
+      margin-top: 20px;
+      margin-bottom: 20px; } }
+
+/* line 158, ../sass/ui/typography.scss */
+h3#reply-title {
+  font-size: 22px;
+  font-size: 1.375rem;
+  line-height: 1.09091;
+  margin-top: 60px; }
+
+/* line 166, ../sass/ui/typography.scss */
+h4 {
+  font-size: 24px;
+  font-size: 1.5rem;
+  line-height: 1;
+  line-height: 32px;
+  color: #b2b3b6;
+  margin-top: 8px;
+  margin-bottom: 8px; }
+  @media only screen and (min-width: 481px) and (max-width: 959px) {
+    /* line 166, ../sass/ui/typography.scss */
+    h4 {
+      font-size: 18px;
+      font-size: 1.125rem;
+      line-height: 1.33333;
+      line-height: 23px; } }
+  @media only screen and (max-width: 480px) {
+    /* line 166, ../sass/ui/typography.scss */
+    h4 {
+      text-align: left; } }
+
+/* line 182, ../sass/ui/typography.scss */
+.media h4 {
+  color: #818285; }
+  @media only screen and (max-width: 480px) {
+    /* line 182, ../sass/ui/typography.scss */
+    .media h4 {
+      text-align: left;
+      padding: 0 15px; } }
+
+/* line 192, ../sass/ui/typography.scss */
+.site-title {
+  font-size: 62px;
+  font-size: 3.875rem;
+  line-height: 1.16129;
+  text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.4);
+  /* Settings declared in Vars, Compass include feature */
+  font-family: "Pacifico", sans-serif; }
+  /* line 197, ../sass/ui/typography.scss */
+  .site-title a {
+    color: #ec145b; }
+    /* line 198, ../sass/ui/typography.scss */
+    .site-title a:hover {
+      color: #ec145b;
+      text-decoration: none; }
+  @media only screen and (max-width: 480px) {
+    /* line 192, ../sass/ui/typography.scss */
+    .site-title {
+      font-size: 41px;
+      font-size: 2.5625rem;
+      line-height: 1.17073;
+      text-align: center;
+      margin-top: 20px; } }
+  @media only screen and (min-width: 481px) and (max-width: 959px) {
+    /* line 192, ../sass/ui/typography.scss */
+    .site-title {
+      font-size: 46px;
+      font-size: 2.875rem;
+      line-height: 1.04348; } }
+
+/* line 213, ../sass/ui/typography.scss */
+.site_tagline {
+  font-size: 16px;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #888; }
+
+/* line 219, ../sass/ui/typography.scss */
+.side_menu {
+  font-size: 13px;
+  font-size: 0.8125rem;
+  line-height: 1.84615; }
+
+/*------------------------------------*\
+$POSTS
+\*------------------------------------*/
+/* line 7, ../sass/ui/posts.scss */
+.single-post .entry-content {
+  margin-bottom: 60px; }
+
+/* line 12, ../sass/ui/posts.scss */
+span.date {
+  margin-bottom: 10px;
+  display: block;
+  color: #818285;
+  font-size: 17px;
+  font-size: 1.0625rem;
+  line-height: 1.41176; }
+  @media only screen and (max-width: 480px) {
+    /* line 12, ../sass/ui/posts.scss */
+    span.date {
+      font-size: 19px;
+      font-size: 1.1875rem;
+      line-height: 1.26316;
+      margin-bottom: 15px;
+      text-align: left;
+      padding: 0px 15px; } }
+
+/* line 26, ../sass/ui/posts.scss */
+span.read-more {
+  display: block;
+  margin-bottom: 60px;
+  margin-top: 0px; }
+  @media only screen and (max-width: 480px) {
+    /* line 26, ../sass/ui/posts.scss */
+    span.read-more {
+      text-align: left;
+      margin-left: 15px; } }
+
+/* line 38, ../sass/ui/posts.scss */
+footer.entry-meta {
+  line-height: 24px;
+  text-align: left; }
+
+/* line 46, ../sass/ui/posts.scss */
+article.post {
+  /* Post Article content */
+  margin-top: 60px;
+  padding: 0px 10px 0px 10px; }
+  @media only screen and (max-width: 480px) {
+    /* line 46, ../sass/ui/posts.scss */
+    article.post {
+      margin-top: 0px;
+      padding: 0px; } }
+  @media only screen and (min-width: 481px) and (max-width: 959px) {
+    /* line 46, ../sass/ui/posts.scss */
+    article.post {
+      margin-top: 20px; } }
+  /* line 60, ../sass/ui/posts.scss */
+  article.post h1 {
+    font-size: 36px;
+    font-size: 2.25rem;
+    line-height: 1.33333;
+    color: #ec145b;
+    margin-bottom: 0px; }
+    @media only screen and (max-width: 480px) {
+      /* line 60, ../sass/ui/posts.scss */
+      article.post h1 {
+        font-size: 26px;
+        font-size: 1.625rem;
+        line-height: 1.84615;
+        padding: 0px 15px; } }
+  /* line 71, ../sass/ui/posts.scss */
+  article.post h4 {
+    font-size: 24px;
+    font-size: 1.5rem;
+    line-height: 1;
+    color: black;
+    margin-bottom: 10px; }
+    @media only screen and (max-width: 480px) {
+      /* line 71, ../sass/ui/posts.scss */
+      article.post h4 {
+        font-size: 22px;
+        font-size: 1.375rem;
+        line-height: 1.09091;
+        line-height: 26px;
+        color: #818285; } }
+    @media only screen and (min-width: 481px) and (max-width: 959px) {
+      /* line 71, ../sass/ui/posts.scss */
+      article.post h4 {
+        font-size: 18px;
+        font-size: 1.125rem;
+        line-height: 1.33333; } }
+  /* line 87, ../sass/ui/posts.scss */
+  article.post span.date {
+    margin-bottom: 20px; }
+
+/* line 94, ../sass/ui/posts.scss */
+.single-post .comments-area {
+  margin-top: 40px;
+  padding: 0px 10px 0px 10px;
+  border-top: 1px solid #b2b3b6; }
+  @media only screen and (max-width: 480px) {
+    /* line 94, ../sass/ui/posts.scss */
+    .single-post .comments-area {
+      margin-top: 20px;
+      padding: 0px 10px; } }
+
+/* line 105, ../sass/ui/posts.scss */
+article.comment {
+  margin-top: 20px; }
+
+@media only screen and (max-width: 480px) {
+  /* line 110, ../sass/ui/posts.scss */
+  ol.commentlist {
+    margin-left: 20px; } }
+
+@media only screen and (max-width: 480px) {
+  /* line 119, ../sass/ui/posts.scss */
+  .media .comment-content p {
+    padding: 0px; } }
+
+/* line 126, ../sass/ui/posts.scss */
+.comment-meta {
+  margin-bottom: 10px; }
+  @media only screen and (max-width: 480px) {
+    /* line 126, ../sass/ui/posts.scss */
+    .comment-meta {
+      line-height: 24px;
+      text-align: left; } }
+
+/* line 139, ../sass/ui/posts.scss */
+h2.comments-title {
+  /* Blog category title */
+  font-size: 22px;
+  font-size: 1.375rem;
+  line-height: 1.09091;
+  font-weight: 400;
+  margin-top: 40px;
+  margin-bottom: 10px;
+  margin-left: 46px; }
+  @media only screen and (max-width: 480px) {
+    /* line 139, ../sass/ui/posts.scss */
+    h2.comments-title {
+      margin-left: 0px;
+      text-align: left;
+      line-height: 30px; } }
+
+/* line 154, ../sass/ui/posts.scss */
+img.avatar {
+  margin: 0 10px 0px 0px; }
+
+/*------------------------------------*\
+$BOXES
+\*------------------------------------*/
+/*------------------------------------*\
+GRIDS - 
+\*------------------------------------*/
+/**
+ * Over-riding Inuit framework here.
+ * When following a 960gs 12 column design, 20px padding-left (rather than 24px) makes for accurate column to grid  
+ * measurements as shown below:
+ * In a 960gs 10px left & right padding on 960px body makes for 940px available width:
+ 
+ * Span-1:   =   60px  =  one-twelth
+ * Span-2:   =  140px  =  one-sixth
+ * Span-3:   =  220px  =  one-quarter
+ * Span-4:   =  300px  =  one-third
+ * Span-5:   =  380px  =  five-twelfths
+ * Span-6:   =  460px  =  one-half 
+ * Span-7:   =  540px  =  seven-twelfths
+ * Span-8:   =  620px  =  two-thirds
+ * Span-9:   =  700px  =  three-quarters
+ * Span-10:  =  780px  =  ten-twelfths
+ * Span-11:  =  860px  =  eleven-twelfths
+ * Span-12:  =  940px  =  one-whole
+ */
+/* line 33, ../sass/ui/boxes.scss */
+.g, .grid {
+  padding-left: 1.25em;
+  /* Adjusted to a 20px gutter */ }
+
+/* line 37, ../sass/ui/boxes.scss */
+.gw, .grid-wrapper {
+  margin-left: -1.25em;
+  /* Adjusted to a 20px gutter */ }
+
+/*------------------------------------*\
+HERO SECTION - BIG BRACKETS & CONTENT 
+\*------------------------------------*/
+/* line 46, ../sass/ui/boxes.scss */
+.hero {
+  -moz-background-size: 100% auto;
+  /* Old Firefox */
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+  background-image: url("images/hero-bg.png");
+  text-align: center; }
+  @media only screen and (max-width: 480px) {
+    /* line 46, ../sass/ui/boxes.scss */
+    .hero {
+      padding: 10px 20px;
+      background-image: url("images/hero-palm-bg.png");
+      min-height: 0px; } }
+  @media only screen and (min-width: 481px) and (max-width: 959px) {
+    /* line 46, ../sass/ui/boxes.scss */
+    .hero {
+      padding: 45px 70px 0px;
+      min-height: 246px; } }
+  @media only screen and (min-width: 960px) {
+    /* line 46, ../sass/ui/boxes.scss */
+    .hero {
+      padding: 50px 70px 0px;
+      min-height: 330px; } }
+  /* line 68, ../sass/ui/boxes.scss */
+  .hero ul {
+    list-style-image: url("images/bullet.png");
+    list-style-position: inside;
+    list-style-type: none;
+    margin-left: 0px;
+    margin-bottom: 0px;
+    font-weight: 300; }
+    @media only screen and (max-width: 480px) {
+      /* line 68, ../sass/ui/boxes.scss */
+      .hero ul {
+        font-size: 20px;
+        font-size: 1.25rem;
+        line-height: 1.2;
+        margin-bottom: 20px; } }
+    @media only screen and (min-width: 481px) and (max-width: 959px) {
+      /* line 68, ../sass/ui/boxes.scss */
+      .hero ul {
+        font-size: 21px;
+        font-size: 1.3125rem;
+        line-height: 1.14286;
+        list-style-image: url("images/bullet-lap.png");
+        line-height: 1.5em; } }
+    @media only screen and (min-width: 960px) {
+      /* line 68, ../sass/ui/boxes.scss */
+      .hero ul {
+        font-size: 30px;
+        font-size: 1.875rem;
+        line-height: 1.6;
+        line-height: 1.5em; } }
+  /* line 92, ../sass/ui/boxes.scss */
+  .hero li {
+    margin-bottom: 0; }
+    @media only screen and (max-width: 480px) {
+      /* line 92, ../sass/ui/boxes.scss */
+      .hero li {
+        margin-top: 10px;
+        margin-bottom: 10px;
+        border-bottom: 1px solid #dcddde;
+        padding-bottom: 10px; } }
+
+/*------------------------------------*\
+SIMON COLUMN - RIGHT HAND SIDE
+\*------------------------------------*/
+@media only screen and (max-width: 480px) {
+  /* line 107, ../sass/ui/boxes.scss */
+  .portrait img {
+    width: 50%;
+    height: auto;
+    margin-bottom: 30px;
+    padding: 10px;
+    border: 1px solid #dcddde; } }
+
+@media only screen and (max-width: 480px) {
+  /* line 118, ../sass/ui/boxes.scss */
+  .page-template-portfolio-php .portrait img, .page-template-about-simon-php .portrait img, .page-template-contact-php .portrait img, .category-blog .portrait img {
+    display: none; } }
+
+/* line 126, ../sass/ui/boxes.scss */
+.promo {
+  text-align: center;
+  line-height: 0; }
+
+/* line 131, ../sass/ui/boxes.scss */
+.hire {
+  background: black;
+  padding: 20px; }
+  @media only screen and (max-width: 480px) {
+    /* line 131, ../sass/ui/boxes.scss */
+    .hire {
+      padding: 20px 30px; } }
+  /* line 139, ../sass/ui/boxes.scss */
+  .hire p {
+    color: white; }
+    @media only screen and (max-width: 480px) {
+      /* line 139, ../sass/ui/boxes.scss */
+      .hire p {
+        padding-left: 0px; } }
+    @media only screen and (min-width: 481px) and (max-width: 959px) {
+      /* line 139, ../sass/ui/boxes.scss */
+      .hire p {
+        font-size: 13px;
+        font-size: 0.8125rem;
+        line-height: 1.84615;
+        margin-bottom: 0; } }
+  /* line 152, ../sass/ui/boxes.scss */
+  .hire span {
+    color: #ec145b; }
+
+/* line 156, ../sass/ui/boxes.scss */
+.portrait {
+  line-height: 0px; }
+
+/* line 161, ../sass/ui/boxes.scss */
+.about-promo {
+  text-align: left;
+  line-height: 0; }
+
+@media only screen and (max-width: 480px) {
+  /* line 169, ../sass/ui/boxes.scss */
+  img#trim {
+    width: 100%;
+    height: auto; } }
+
+@media only screen and (max-width: 480px) {
+  /* line 177, ../sass/ui/boxes.scss */
+  .media {
+    text-align: center; } }
+/* line 182, ../sass/ui/boxes.scss */
+.media ul {
+  list-style: circle inside none;
+  margin-left: 0px;
+  margin-bottom: 20px;
+  font-weight: 300;
+  font-style: italic;
+  padding-left: 10px;
+  text-align: left; }
+  @media only screen and (max-width: 480px) {
+    /* line 182, ../sass/ui/boxes.scss */
+    .media ul {
+      font-size: 19px;
+      font-size: 1.1875rem;
+      line-height: 1.26316;
+      line-height: 32px; } }
+  @media only screen and (min-width: 481px) and (max-width: 959px) {
+    /* line 182, ../sass/ui/boxes.scss */
+    .media ul {
+      font-size: 13px;
+      font-size: 0.8125rem;
+      line-height: 1.84615;
+      line-height: 24px; } }
+  @media only screen and (min-width: 960px) {
+    /* line 182, ../sass/ui/boxes.scss */
+    .media ul {
+      font-size: 17px;
+      font-size: 1.0625rem;
+      line-height: 1.41176;
+      line-height: 32px; } }
+/* line 207, ../sass/ui/boxes.scss */
+.media p {
+  padding: 0px; }
+  @media only screen and (max-width: 480px) {
+    /* line 207, ../sass/ui/boxes.scss */
+    .media p {
+      padding: 0px 15px; } }
+
+/* line 218, ../sass/ui/boxes.scss */
+.media__img {
+  margin-right: 10px;
+  margin-left: 30px; }
+  @media only screen and (max-width: 480px) {
+    /* line 218, ../sass/ui/boxes.scss */
+    .media__img {
+      float: none;
+      margin-right: 0;
+      margin-left: 0; } }
+  @media only screen and (min-width: 481px) and (max-width: 959px) {
+    /* line 218, ../sass/ui/boxes.scss */
+    .media__img {
+      width: 115px;
+      height: 98;
+      margin-left: 23px; } }
+
+/* line 235, ../sass/ui/boxes.scss */
+.footer {
+  background-color: #818285; }
+
+/*------------------------------------*\
+PORTFOLIO PAGE
+\*------------------------------------*/
+/* line 247, ../sass/ui/boxes.scss */
+figure {
+  display: block;
+  position: relative;
+  float: left;
+  overflow: hidden;
+  margin: 0 20px 30px 0;
+  border: 1px solid #e3e3e4; }
+  @media only screen and (max-width: 480px) {
+    /* line 247, ../sass/ui/boxes.scss */
+    figure {
+      width: 100%;
+      margin-bottom: 50px; } }
+  @media only screen and (min-width: 481px) and (max-width: 959px) {
+    /* line 247, ../sass/ui/boxes.scss */
+    figure {
+      width: 100%; } }
+  @media only screen and (max-width: 480px) {
+    /* line 264, ../sass/ui/boxes.scss */
+    figure img {
+      width: 100%; } }
+
+/* line 271, ../sass/ui/boxes.scss */
+figcaption {
+  position: absolute;
+  background: black;
+  background: rgba(0, 0, 0, 0.85);
+  color: white;
+  width: 100%;
+  opacity: 0;
+  -webkit-transition: all 0.4s ease;
+  -moz-transition: all 0.4s ease;
+  -o-transition: all 0.4s ease; }
+  @media only screen and (max-width: 480px) {
+    /* line 271, ../sass/ui/boxes.scss */
+    figcaption {
+      padding: 10px 10px 0px 10px; } }
+  @media only screen and (min-width: 481px) and (max-width: 959px) {
+    /* line 271, ../sass/ui/boxes.scss */
+    figcaption {
+      padding: 10px 10px 0px 10px; } }
+  @media only screen and (min-width: 960px) {
+    /* line 271, ../sass/ui/boxes.scss */
+    figcaption {
+      padding: 5px 5px 10px 5px; } }
+  /* line 295, ../sass/ui/boxes.scss */
+  figcaption h3 {
+    margin-bottom: -9px;
+    margin-top: 0px; }
+    @media only screen and (max-width: 480px) {
+      /* line 295, ../sass/ui/boxes.scss */
+      figcaption h3 {
+        padding: 0px 0px 3px; } }
+    @media only screen and (min-width: 481px) and (max-width: 959px) {
+      /* line 295, ../sass/ui/boxes.scss */
+      figcaption h3 {
+        font-size: 19px;
+        font-size: 1.1875rem;
+        line-height: 1.26316;
+        padding: 0px 0px 8px; } }
+    @media only screen and (min-width: 960px) {
+      /* line 295, ../sass/ui/boxes.scss */
+      figcaption h3 {
+        font-size: 22px;
+        font-size: 1.375rem;
+        line-height: 1.09091;
+        padding: 10px 10px 10px 10px; } }
+  /* line 315, ../sass/ui/boxes.scss */
+  figcaption p {
+    margin: 0;
+    color: white;
+    padding: 0px 0px 8px; }
+    @media only screen and (max-width: 480px) {
+      /* line 315, ../sass/ui/boxes.scss */
+      figcaption p {
+        font-size: 14px;
+        font-size: 0.875rem;
+        line-height: 1.71429;
+        line-height: 30px; } }
+    @media only screen and (min-width: 481px) and (max-width: 959px) {
+      /* line 315, ../sass/ui/boxes.scss */
+      figcaption p {
+        font-size: 10px;
+        font-size: 0.625rem;
+        line-height: 2.4; } }
+    @media only screen and (min-width: 960px) {
+      /* line 315, ../sass/ui/boxes.scss */
+      figcaption p {
+        font-size: 15px;
+        font-size: 0.9375rem;
+        line-height: 1.6;
+        line-height: 32px;
+        padding: 0 0 0 10px; } }
+  /* line 337, ../sass/ui/boxes.scss */
+  figcaption span {
+    margin: 0;
+    font-size: 14px;
+    line-height: 18px;
+    color: #ec145b;
+    padding: 0 2px; }
+  /* line 345, ../sass/ui/boxes.scss */
+  figcaption a {
+    background: #ec145b;
+    color: white;
+    padding: 3px 5px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+    -o-border-radius: 4px;
+    border-radius: 4px; }
+
+/* line 357, ../sass/ui/boxes.scss */
+figure:hover figcaption {
+  opacity: 1; }
+
+/* line 361, ../sass/ui/boxes.scss */
+figure:before {
+  display: none;
+  content: "+";
+  position: absolute;
+  font-weight: 800;
+  background: #ec145b;
+  background: rgba(236, 20, 91, 0.6);
+  text-shadow: 0 0 0px white;
+  color: white;
+  width: 24px;
+  height: 24px;
+  -webkit-border-radius: 12px;
+  -moz-border-radius: 12px;
+  -ms-border-radius: 12px;
+  -o-border-radius: 12px;
+  border-radius: 12px;
+  text-align: center;
+  font-size: 14px;
+  line-height: 24px;
+  -moz-transition: all 0.6s ease;
+  opacity: 0.6; }
+
+/* line 380, ../sass/ui/boxes.scss */
+figure:hover:before {
+  opacity: 0; }
+
+/* line 385, ../sass/ui/boxes.scss */
+.cap-bot figcaption {
+  left: 0;
+  bottom: -30%; }
+
+/* line 389, ../sass/ui/boxes.scss */
+.cap-bot:hover figcaption {
+  bottom: 0; }
+
+/* line 394, ../sass/ui/boxes.scss */
+.no-pad {
+  /* for no padding on a grid */
+  padding-left: 0px; }
+  @media only screen and (min-width: 481px) and (max-width: 959px) {
+    /* line 394, ../sass/ui/boxes.scss */
+    .no-pad {
+      padding-left: 1.25em; } }
+
+/* line 406, ../sass/ui/boxes.scss */
+.portfolio {
+  padding-top: 0px; }
+
+/*------------------------------------*\
+CONTACT PAGE
+\*------------------------------------*/
+/* line 416, ../sass/ui/boxes.scss */
+.get-in-touch {
+  /* div holding the icon text*/
+  text-align: center; }
+  @media only screen and (max-width: 480px) {
+    /* line 416, ../sass/ui/boxes.scss */
+    .get-in-touch {
+      text-align: left;
+      padding-left: 10px; } }
+
+/* line 426, ../sass/ui/boxes.scss */
+.icon-text > .icon-text__icon {
+  /* icon settings */
+  margin-left: 20px; }
+  @media only screen and (max-width: 480px) {
+    /* line 426, ../sass/ui/boxes.scss */
+    .icon-text > .icon-text__icon {
+      margin-left: 0px;
+      margin-bottom: 5px; } }
+
+/* line 435, ../sass/ui/boxes.scss */
+a.icon-text, span.icon-text {
+  /* text settings */
+  font-size: 20px;
+  font-size: 1.25rem;
+  line-height: 1.2; }
+  @media only screen and (min-width: 481px) and (max-width: 959px) {
+    /* line 435, ../sass/ui/boxes.scss */
+    a.icon-text, span.icon-text {
+      font-size: 16px;
+      font-size: 1rem;
+      line-height: 1.5; } }
+
+/* line 444, ../sass/ui/boxes.scss */
+.e, .p, .i {
+  display: inline-block;
+  font-style: normal;
+  height: 35px;
+  position: relative;
+  text-align: center;
+  width: 34px; }
+
+/* line 453, ../sass/ui/boxes.scss */
+.e {
+  background-image: url("images/icon-email.jpg");
+  overflow: hidden;
+  top: -1px;
+  vertical-align: middle; }
+
+/* line 460, ../sass/ui/boxes.scss */
+.p {
+  background-image: url("images/icon-phone.jpg");
+  overflow: hidden;
+  top: -1px;
+  vertical-align: middle; }
+
+/* line 468, ../sass/ui/boxes.scss */
+.pink-button {
+  background: #ec145b;
+  color: white;
+  border: 0px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+  border-radius: 4px;
+  line-height: 1em;
+  padding: 5px 10px; }
+  /* line 476, ../sass/ui/boxes.scss */
+  .pink-button:hover {
+    background: #4d4d4f;
+    text-decoration: none; }
+
+/* line 481, ../sass/ui/boxes.scss */
+.cv {
+  line-height: 2em; }
+  @media only screen and (max-width: 480px) {
+    /* line 481, ../sass/ui/boxes.scss */
+    .cv {
+      margin-left: 55px; } }
+
+/* make keyframes that tell the start state and the end state of our object */
+@-webkit-keyframes fadeIn {
+  /* line 492, ../sass/ui/boxes.scss */
+  from {
+    opacity: 0; }
+
+  /* line 492, ../sass/ui/boxes.scss */
+  to {
+    opacity: 1; } }
+
+@-moz-keyframes fadeIn {
+  /* line 493, ../sass/ui/boxes.scss */
+  from {
+    opacity: 0; }
+
+  /* line 493, ../sass/ui/boxes.scss */
+  to {
+    opacity: 1; } }
+
+@keyframes fadeIn {
+  /* line 494, ../sass/ui/boxes.scss */
+  from {
+    opacity: 0; }
+
+  /* line 494, ../sass/ui/boxes.scss */
+  to {
+    opacity: 1; } }
+
+/* line 496, ../sass/ui/boxes.scss */
+.fade-in {
+  opacity: 0;
+  /* make things invisible upon start */
+  -webkit-animation: fadeIn ease-in 1;
+  /* call our keyframe named fadeIn, use animattion ease-in and repeat it only 1 time */
+  -moz-animation: fadeIn ease-in 1;
+  animation: fadeIn ease-in 1;
+  -webkit-animation-fill-mode: forwards;
+  /* this makes sure that after animation is done we remain at the last keyframe value (opacity: 1)*/
+  -moz-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+  -webkit-animation-duration: 1s;
+  -moz-animation-duration: 1s;
+  animation-duration: 1s; }
+  @media only screen and (max-width: 480px) {
+    /* line 496, ../sass/ui/boxes.scss */
+    .fade-in {
+      opacity: 1;
+      -webkit-animation: fadeIn ease-in 0;
+      -moz-animation: fadeIn ease-in 0;
+      animation: fadeIn ease-in 0; } }
+
+/* line 519, ../sass/ui/boxes.scss */
+.fade-in.fadeone {
+  /* fade in H1 IF we wanted to */
+  -webkit-animation-delay: 0.7s;
+  -moz-animation-delay: 0.7s;
+  animation-delay: 0.7s; }
+
+/* line 525, ../sass/ui/boxes.scss */
+.fade-in.fadetwo {
+  /* fade in first hero bullet */
+  -webkit-animation-delay: 1.2s;
+  -moz-animation-delay: 1.2s;
+  animation-delay: 1.2s; }
+
+/* line 531, ../sass/ui/boxes.scss */
+.fade-in.fadethree {
+  /* fade in second hero bullet */
+  -webkit-animation-delay: 1.6s;
+  -moz-animation-delay: 1.6s;
+  animation-delay: 1.6s; }
+
+/* line 537, ../sass/ui/boxes.scss */
+.fade-in.fadefour {
+  /* fade in third hero bullet */
+  -webkit-animation-delay: 2.1s;
+  -moz-animation-delay: 2.1s;
+  animation-delay: 2.1s; }
+
+/*------------------------------------*\
+$FORMS
+\*------------------------------------*/
+/* line 8, ../sass/ui/forms.scss */
+.form {
+  padding: 20px 20px 0px 80px; }
+  @media only screen and (max-width: 480px) {
+    /* line 8, ../sass/ui/forms.scss */
+    .form {
+      padding: 20px 10px 0px 10px; } }
+
+/* line 17, ../sass/ui/forms.scss */
+input, textarea, select {
+  /* Settings for text areas */
+  border: 1px solid #cccccc;
+  padding: 10px;
+  font-size: 15px;
+  line-height: 1.2em;
+  background: #fff;
+  -webkit-appearance: none;
+  -webkit-box-shadow: 1px 1px 1px white;
+  -webkit-border-radius: 0px; }
+
+/* line 29, ../sass/ui/forms.scss */
+.single input, textarea, select {
+  /* Settings for fields full width on palm */ }
+  @media only screen and (max-width: 480px) {
+    /* line 29, ../sass/ui/forms.scss */
+    .single input, textarea, select {
+      width: 100%; } }
+
+/* line 37, ../sass/ui/forms.scss */
+.form .gform_wrapper .top_label input.medium {
+  /* text inside field settings */
+  font-size: 15px;
+  font-size: 0.9375rem;
+  line-height: 1.6;
+  padding: 5px;
+  width: 100%;
+  color: #818285; }
+  @media only screen and (min-width: 481px) and (max-width: 959px) {
+    /* line 37, ../sass/ui/forms.scss */
+    .form .gform_wrapper .top_label input.medium {
+      font-size: 13px;
+      font-size: 0.8125rem;
+      line-height: 1.84615;
+      padding: 3px; } }
+
+/* line 53, ../sass/ui/forms.scss */
+.single label {
+  /* label text settings for blog form */
+  font-size: 15px;
+  font-size: 0.9375rem;
+  line-height: 1.6;
+  padding: 5px;
+  width: 50%;
+  text-align: left; }
+  @media only screen and (max-width: 480px) {
+    /* line 53, ../sass/ui/forms.scss */
+    .single label {
+      width: 100%; } }
+  @media only screen and (min-width: 481px) and (max-width: 959px) {
+    /* line 53, ../sass/ui/forms.scss */
+    .single label {
+      font-size: 13px;
+      font-size: 0.8125rem;
+      line-height: 1.84615;
+      padding: 3px; } }
+
+/* line 71, ../sass/ui/forms.scss */
+.gform_wrapper textarea.medium {
+  /* Big textbox text settings */
+  height: 150px;
+  padding: 10px;
+  font-size: 15px;
+  font-size: 0.9375rem;
+  line-height: 1.6;
+  color: #818285; }
+  @media only screen and (min-width: 481px) and (max-width: 959px) {
+    /* line 71, ../sass/ui/forms.scss */
+    .gform_wrapper textarea.medium {
+      font-size: 13px;
+      font-size: 0.8125rem;
+      line-height: 1.84615;
+      padding: 3px; } }
+
+/* line 83, ../sass/ui/forms.scss */
+textarea:focus, input:focus {
+  /* highlight border for active field */
+  border: 1px solid #ec145b; }
+
+/* line 87, ../sass/ui/forms.scss */
+#gforms_confirmation_message {
+  font-size: 23px;
+  line-height: 1.5em;
+  margin: 30px 0;
+  max-width: 99%; }
+
+/* line 94, ../sass/ui/forms.scss */
+.gform_wrapper ul.gform_fields li .gfield_label {
+  /* field label text */
+  font-weight: normal; }
+  @media only screen and (min-width: 481px) and (max-width: 959px) {
+    /* line 94, ../sass/ui/forms.scss */
+    .gform_wrapper ul.gform_fields li .gfield_label {
+      font-size: 13px;
+      font-size: 0.8125rem;
+      line-height: 1.84615; } }
+
+/* line 102, ../sass/ui/forms.scss */
+.gform_wrapper ul.gform_fields .gfield_required {
+  color: #ec145b;
+  margin-left: 4px; }
+
+/* line 107, ../sass/ui/forms.scss */
+.form .gform_wrapper .gform_footer input[type="submit"] {
+  /* Submit button */
+  font-size: 1em;
+  background: #ec145b;
+  color: white;
+  border: 0px;
+  padding: 5px 12px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+  border-radius: 4px; }
+
+/* line 117, ../sass/ui/forms.scss */
+.single input[type="submit"] {
+  /* Submit button on blog posts*/
+  font-size: 1em;
+  background: #ec145b;
+  color: white;
+  border: 0px;
+  padding: 5px 12px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+  border-radius: 4px; }
+  @media only screen and (max-width: 480px) {
+    /* line 117, ../sass/ui/forms.scss */
+    .single input[type="submit"] {
+      width: 50%;
+      font-size: 15px;
+      font-size: 0.9375rem;
+      line-height: 1.6; } }
+
+/* line 133, ../sass/ui/forms.scss */
+#commentform label {
+  display: block; }

@@ -1,0 +1,35 @@
+/*------------------------------------*\
+HERO SECTION - FADE IN OF BULLETS
+\*------------------------------------*/
+/* make keyframes that tell the start state and the end state of our object */
+@-webkit-keyframes fadeIn {
+  /* line 10, ../sass/ie9.scss */
+  from {
+    opacity: 1; }
+
+  /* line 10, ../sass/ie9.scss */
+  to {
+    opacity: 1; } }
+
+@-moz-keyframes fadeIn {
+  /* line 11, ../sass/ie9.scss */
+  from {
+    opacity: 1; }
+
+  /* line 11, ../sass/ie9.scss */
+  to {
+    opacity: 1; } }
+
+@keyframes fadeIn {
+  /* line 12, ../sass/ie9.scss */
+  from {
+    opacity: 1; }
+
+  /* line 12, ../sass/ie9.scss */
+  to {
+    opacity: 1; } }
+
+/* line 14, ../sass/ie9.scss */
+.fade-in {
+  opacity: 1;
+  /* make things invisible upon start */ }

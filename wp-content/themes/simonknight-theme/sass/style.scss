@@ -1,0 +1,48 @@
+@charset "UTF-8";
+/*------------------------------------*\
+    YOUR-PROJECT.CSS
+\*------------------------------------*/ 
+/**
+ * 
+ * sass --watch your-project.scss:your-project.min.css --style compressed
+ * 
+ * Here we set up some variables, include the inuit.css framework, then add our
+ * project-specific components afterwards.
+ */
+
+/*
+Theme Name:     simonknight-theme
+Theme URI:
+Description:    Themem for simonknight-co-uk
+Author:         Simon Knight
+Author URI:
+Template:       twentytwelve
+Version:        1
+*/
+
+/**
+ * Setup
+ */
+
+
+@import "vars";
+@import "inuit.css/inuit";
+
+/**
+ * She’s all yours, cap’n... Begin importing your stuff here.
+ */ 
+
+@import "compass";
+
+
+@import "ui/page";
+@import "ui/page-header";
+@import "ui/page-footer";
+@import "ui/typography";
+@import "ui/posts";
+@import "ui/boxes";
+@import "ui/forms";
+
+
+
+
